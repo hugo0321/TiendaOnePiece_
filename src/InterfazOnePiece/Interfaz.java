@@ -4,6 +4,8 @@
  */
 package InterfazOnePiece;
 
+import RegistrarCliente.RegistrarCliente;
+
 /**
  *
  * @author Hugo
@@ -55,8 +57,8 @@ public class Interfaz extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenu5 = new javax.swing.JMenu();
-        jMenu6 = new javax.swing.JMenu();
+        jMenuItem14 = new javax.swing.JMenuItem();
+        jMenuItem15 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
@@ -131,8 +133,13 @@ public class Interfaz extends javax.swing.JFrame {
         jMenu1.add(jMenu3);
 
         jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/cart.png"))); // NOI18N
-        jMenuItem1.setText("Realizar una compra");
+        jMenuItem1.setText("Registrar cliente");
         jMenuItem1.setActionCommand("Realizar compra");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_DOWN_MASK));
@@ -149,13 +156,18 @@ public class Interfaz extends javax.swing.JFrame {
 
         jMenu2.setText("Mi Perfil");
 
-        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/seleccione.png"))); // NOI18N
-        jMenu5.setText("Iniciar sesión");
-        jMenu2.add(jMenu5);
+        jMenuItem14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/seleccione.png"))); // NOI18N
+        jMenuItem14.setText("Iniciar Sesión");
+        jMenu2.add(jMenuItem14);
 
-        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/usuario.png"))); // NOI18N
-        jMenu6.setText("Crear Cuenta");
-        jMenu2.add(jMenu6);
+        jMenuItem15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/usuario.png"))); // NOI18N
+        jMenuItem15.setText("Crear Cuenta");
+        jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem15ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem15);
 
         jMenuItem13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/boton.png"))); // NOI18N
         jMenuItem13.setText("Cerrar Sesión");
@@ -197,6 +209,17 @@ public class Interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
 
+    private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem15ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+         RegistrarCliente interfaz = RegistrarCliente.getInstance();
+       interfaz.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -210,14 +233,14 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
+    private javax.swing.JMenuItem jMenuItem14;
+    private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
