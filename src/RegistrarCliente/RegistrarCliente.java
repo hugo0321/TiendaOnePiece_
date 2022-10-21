@@ -4,6 +4,8 @@
  */
 package RegistrarCliente;
 
+import ControllerRegistroCLiente.ClientesController;
+import DAOClientes.DAOclientes;
 import InterfazOnePiece.Interfaz;
 
 /**
@@ -67,10 +69,15 @@ public class RegistrarCliente extends javax.swing.JFrame {
         jLabel1.setText("Registro de Cliente");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Nombre :"));
-        jPanel1.setLayout(new java.awt.GridLayout());
+        jPanel1.setLayout(new java.awt.GridLayout(1, 0));
 
         txtNombCliente.setText("Escriba aquí");
         txtNombCliente.setBorder(null);
+        txtNombCliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtNombClienteMouseClicked(evt);
+            }
+        });
         txtNombCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNombClienteActionPerformed(evt);
@@ -79,14 +86,19 @@ public class RegistrarCliente extends javax.swing.JFrame {
         jPanel1.add(txtNombCliente);
 
         jPanelApellido2.setBorder(javax.swing.BorderFactory.createTitledBorder("Apellido 2:"));
-        jPanelApellido2.setLayout(new java.awt.GridLayout());
+        jPanelApellido2.setLayout(new java.awt.GridLayout(1, 0));
 
         txtApellido.setText("Escriba aquí");
         txtApellido.setBorder(null);
+        txtApellido.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtApellidoMouseClicked(evt);
+            }
+        });
         jPanelApellido2.add(txtApellido);
 
         JpanelTipoDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder("Tipo Documento de Identidad"));
-        JpanelTipoDocumento.setLayout(new java.awt.GridLayout());
+        JpanelTipoDocumento.setLayout(new java.awt.GridLayout(1, 0));
 
         jCheckBox1.setText("Cédula de ciudadania");
         JpanelTipoDocumento.add(jCheckBox1);
@@ -100,21 +112,36 @@ public class RegistrarCliente extends javax.swing.JFrame {
         JpanelTipoDocumento.add(jCheckBox2);
 
         JpanelNumeroDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder("Número Documento"));
-        JpanelNumeroDocumento.setLayout(new java.awt.GridLayout());
+        JpanelNumeroDocumento.setLayout(new java.awt.GridLayout(1, 0));
 
         txtdocumento.setText("Solo números");
+        txtdocumento.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtdocumentoMouseClicked(evt);
+            }
+        });
         txtdocumento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtdocumentoActionPerformed(evt);
             }
         });
+        txtdocumento.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtdocumentoKeyTyped(evt);
+            }
+        });
         JpanelNumeroDocumento.add(txtdocumento);
 
         jPanelNombre2.setBorder(javax.swing.BorderFactory.createTitledBorder("Nombre 2 :"));
-        jPanelNombre2.setLayout(new java.awt.GridLayout());
+        jPanelNombre2.setLayout(new java.awt.GridLayout(1, 0));
 
         txtNombCliente2.setText("Opcional");
         txtNombCliente2.setBorder(null);
+        txtNombCliente2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtNombCliente2MouseClicked(evt);
+            }
+        });
         txtNombCliente2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNombCliente2ActionPerformed(evt);
@@ -123,10 +150,15 @@ public class RegistrarCliente extends javax.swing.JFrame {
         jPanelNombre2.add(txtNombCliente2);
 
         jPanelApellido.setBorder(javax.swing.BorderFactory.createTitledBorder("Apellido"));
-        jPanelApellido.setLayout(new java.awt.GridLayout());
+        jPanelApellido.setLayout(new java.awt.GridLayout(1, 0));
 
         txtApellido2.setText("Escriba aquí");
         txtApellido2.setBorder(null);
+        txtApellido2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtApellido2MouseClicked(evt);
+            }
+        });
         jPanelApellido.add(txtApellido2);
 
         jPanelPromedioCompras.setBorder(javax.swing.BorderFactory.createTitledBorder("Número Compras Mensuales"));
@@ -291,11 +323,44 @@ public class RegistrarCliente extends javax.swing.JFrame {
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
         // TODO add your handling code here:
+         DAOclientes clientCont = ClientesController.getInstance();
+        clientCont.AgregarCliente(txtNombCliente.getText());
+                
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEditarActionPerformed
+
+    private void txtNombClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombClienteMouseClicked
+        // TODO add your handling code here:
+        txtNombCliente.setText("");
+    }//GEN-LAST:event_txtNombClienteMouseClicked
+
+    private void txtNombCliente2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombCliente2MouseClicked
+        // TODO add your handling code here:
+        txtNombCliente2.setText("");
+    }//GEN-LAST:event_txtNombCliente2MouseClicked
+
+    private void txtApellido2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtApellido2MouseClicked
+        // TODO add your handling code here:
+        txtApellido2.setText("");
+    }//GEN-LAST:event_txtApellido2MouseClicked
+
+    private void txtApellidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtApellidoMouseClicked
+        // TODO add your handling code here:
+        txtApellido.setText("");
+    }//GEN-LAST:event_txtApellidoMouseClicked
+
+    private void txtdocumentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtdocumentoMouseClicked
+        // TODO add your handling code here:
+        txtdocumento.setText("");
+    }//GEN-LAST:event_txtdocumentoMouseClicked
+
+    private void txtdocumentoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtdocumentoKeyTyped
+        // TODO add your handling code here:
+          if(!Character.isDigit(evt.getKeyChar())) evt.consume();
+    }//GEN-LAST:event_txtdocumentoKeyTyped
 
     /**
      *
