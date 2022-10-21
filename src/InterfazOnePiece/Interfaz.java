@@ -9,13 +9,25 @@ package InterfazOnePiece;
  * @author Hugo
  */
 public class Interfaz extends javax.swing.JFrame {
+ private static Interfaz interfaz;
+    /**
+     * Creates new form MenuPrincipal
+     */
+    private Interfaz() {
+        initComponents();
+    }
 
+    public static Interfaz getInstance(){
+        if(interfaz==null)
+            interfaz=new Interfaz();
+        return interfaz;
+    }
     /**
      * Creates new form Interfaz
      */
-    public Interfaz() {
-        initComponents();
-    }
+    //public Interfaz() {
+     //   initComponents();
+   // }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -80,12 +92,12 @@ public class Interfaz extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(199, 236, 238));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Hugo\\Downloads\\Tienda One piece\\2026245.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/2026245.jpg"))); // NOI18N
         jPanel2.add(jLabel1);
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
 
-        jMenuBar1.setBackground(new java.awt.Color(51, 51, 51));
+        jMenuBar1.setBackground(new java.awt.Color(204, 255, 255));
 
         jMenu1.setText("Menú");
 
@@ -188,37 +200,9 @@ public class Interfaz extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Interfaz.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Interfaz().setVisible(true);
-            }
-        });
-    }
+    
+        
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

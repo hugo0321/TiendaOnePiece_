@@ -4,6 +4,8 @@
  */
 package tiendaonepiece;
 
+import InterfazOnePiece.Interfaz;
+
 /**
  *
  * @author Hugo
@@ -15,6 +17,8 @@ public class TiendaOnePiece {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Interfaz interfaz= Interfaz.getInstance();
+        interfaz.setVisible(true);
     }
     
 }
