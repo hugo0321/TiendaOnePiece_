@@ -4,6 +4,7 @@
  */
 package InterfazOnePiece;
 
+import RegistrarCliente.MirarClientes;
 import RegistrarCliente.RegistrarCliente;
 
 /**
@@ -55,6 +56,7 @@ public class Interfaz extends javax.swing.JFrame {
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem16 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem14 = new javax.swing.JMenuItem();
@@ -102,6 +104,11 @@ public class Interfaz extends javax.swing.JFrame {
         jMenuBar1.setBackground(new java.awt.Color(204, 255, 255));
 
         jMenu1.setText("Menú");
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
+            }
+        });
 
         jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/shopping-bag.png"))); // NOI18N
         jMenu3.setText("Productos disponibles");
@@ -141,6 +148,14 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jMenuItem1);
+
+        jMenuItem16.setText("Lista de Clientes");
+        jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem16ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem16);
 
         jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/2931188_door_enter_exit_leave_out_icon.png"))); // NOI18N
@@ -215,10 +230,22 @@ public class Interfaz extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-         RegistrarCliente interfaz = RegistrarCliente.getInstance();
-       interfaz.setVisible(true);
+         RegistrarCliente registrarcliente = RegistrarCliente.getInstance();
+       registrarcliente.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
+        // TODO add your handling code here:
+       
+    }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
+        // TODO add your handling code here:
+         MirarClientes mirarclientes= MirarClientes.getInstance();
+        mirarclientes.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem16ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -241,6 +268,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem15;
+    private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;

@@ -332,8 +332,11 @@ public class RegistrarCliente extends javax.swing.JFrame {
         if (cH_CC.isSelected()){
             TI=" Cédula de Ciudadanía";
         }else{
+            if(cH_Otro.isSelected()){
             TI="Otro";
         }
+        }
+        String numident=txtdocumento.getText();
         String NCM="";
         if(cH_uno.isSelected()){
             NCM="1 a 10 compras";
@@ -351,7 +354,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
             }
         }
             
-      clientCont.AgregarCliente(nombCliente,nombCliente2 , ApeCliente, ApeCliente2, TI, NCM);
+      clientCont.AgregarCliente(ApeCliente, ApeCliente2,nombCliente,nombCliente2 , TI,numident, NCM);
         
          
          

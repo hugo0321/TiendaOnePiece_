@@ -4,14 +4,17 @@
  */
 package DAOClientes;
 
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Hugo
  */
 public interface DAOclientes {
     
-    public void AgregarCliente(String cliente,String ccliente, String tcliente,String scliente,String vcliente,String ecliente);
-    public void MostrarClientes();
+    public boolean AgregarCliente(String cliente,String ccliente, String tcliente,String scliente,String vcliente,String ecliente, String zcliente);
+    public boolean AgregarCliente(String[] cliente);
+    public DefaultTableModel MostrarClientes();
     public void ActualizarCliente(int codigo);
     public void EliminarCliente(int codigo);
 
