@@ -184,17 +184,17 @@
         <Property name="rows" type="int" value="1"/>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+        <Component class="javax.swing.JCheckBox" name="cH_CC">
           <Properties>
             <Property name="text" type="java.lang.String" value="C&#xe9;dula de ciudadania"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox2">
+        <Component class="javax.swing.JCheckBox" name="cH_Otro">
           <Properties>
             <Property name="text" type="java.lang.String" value="Otro"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cH_OtroActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -295,10 +295,10 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jCheckBox6" min="-2" pref="85" max="-2" attributes="0"/>
-                      <Component id="jCheckBox5" min="-2" pref="85" max="-2" attributes="0"/>
-                      <Component id="jCheckBox4" min="-2" pref="85" max="-2" attributes="0"/>
-                      <Component id="jCheckBox3" min="-2" pref="85" max="-2" attributes="0"/>
+                      <Component id="cH_31" min="-2" pref="85" max="-2" attributes="0"/>
+                      <Component id="cH_21" min="-2" pref="85" max="-2" attributes="0"/>
+                      <Component id="cH_11" min="-2" pref="85" max="-2" attributes="0"/>
+                      <Component id="cH_uno" min="-2" pref="85" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="71" max="32767" attributes="0"/>
               </Group>
@@ -308,38 +308,38 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                  <Component id="jCheckBox3" min="-2" max="-2" attributes="0"/>
+                  <Component id="cH_uno" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jCheckBox4" min="-2" max="-2" attributes="0"/>
+                  <Component id="cH_11" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jCheckBox5" min="-2" max="-2" attributes="0"/>
+                  <Component id="cH_21" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jCheckBox6" min="-2" max="-2" attributes="0"/>
+                  <Component id="cH_31" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox3">
+        <Component class="javax.swing.JCheckBox" name="cH_uno">
           <Properties>
             <Property name="text" type="java.lang.String" value="1-10"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jCheckBox3ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cH_unoActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox4">
+        <Component class="javax.swing.JCheckBox" name="cH_11">
           <Properties>
             <Property name="text" type="java.lang.String" value="11-20"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox5">
+        <Component class="javax.swing.JCheckBox" name="cH_21">
           <Properties>
             <Property name="text" type="java.lang.String" value="21-30"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JCheckBox" name="jCheckBox6">
+        <Component class="javax.swing.JCheckBox" name="cH_31">
           <Properties>
             <Property name="text" type="java.lang.String" value="31 o m&#xe1;s"/>
           </Properties>

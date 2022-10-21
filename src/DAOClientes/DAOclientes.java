@@ -10,7 +10,7 @@ package DAOClientes;
  */
 public interface DAOclientes {
     
-    public void AgregarCliente(String cliente);
+    public void AgregarCliente(String cliente,String ccliente, String tcliente,String scliente,String vcliente,String ecliente);
     public void MostrarClientes();
     public void ActualizarCliente(int codigo);
     public void EliminarCliente(int codigo);

@@ -46,8 +46,8 @@ public class RegistrarCliente extends javax.swing.JFrame {
         jPanelApellido2 = new javax.swing.JPanel();
         txtApellido = new javax.swing.JTextField();
         JpanelTipoDocumento = new javax.swing.JPanel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
+        cH_CC = new javax.swing.JCheckBox();
+        cH_Otro = new javax.swing.JCheckBox();
         JpanelNumeroDocumento = new javax.swing.JPanel();
         txtdocumento = new javax.swing.JTextField();
         jPanelNombre2 = new javax.swing.JPanel();
@@ -55,10 +55,10 @@ public class RegistrarCliente extends javax.swing.JFrame {
         jPanelApellido = new javax.swing.JPanel();
         txtApellido2 = new javax.swing.JTextField();
         jPanelPromedioCompras = new javax.swing.JPanel();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
+        cH_uno = new javax.swing.JCheckBox();
+        cH_11 = new javax.swing.JCheckBox();
+        cH_21 = new javax.swing.JCheckBox();
+        cH_31 = new javax.swing.JCheckBox();
         btnRegresar = new javax.swing.JButton();
         btnRegistrar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
@@ -100,16 +100,16 @@ public class RegistrarCliente extends javax.swing.JFrame {
         JpanelTipoDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder("Tipo Documento de Identidad"));
         JpanelTipoDocumento.setLayout(new java.awt.GridLayout(1, 0));
 
-        jCheckBox1.setText("Cédula de ciudadania");
-        JpanelTipoDocumento.add(jCheckBox1);
+        cH_CC.setText("Cédula de ciudadania");
+        JpanelTipoDocumento.add(cH_CC);
 
-        jCheckBox2.setText("Otro");
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+        cH_Otro.setText("Otro");
+        cH_Otro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
+                cH_OtroActionPerformed(evt);
             }
         });
-        JpanelTipoDocumento.add(jCheckBox2);
+        JpanelTipoDocumento.add(cH_Otro);
 
         JpanelNumeroDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder("Número Documento"));
         JpanelNumeroDocumento.setLayout(new java.awt.GridLayout(1, 0));
@@ -163,18 +163,18 @@ public class RegistrarCliente extends javax.swing.JFrame {
 
         jPanelPromedioCompras.setBorder(javax.swing.BorderFactory.createTitledBorder("Número Compras Mensuales"));
 
-        jCheckBox3.setText("1-10");
-        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
+        cH_uno.setText("1-10");
+        cH_uno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox3ActionPerformed(evt);
+                cH_unoActionPerformed(evt);
             }
         });
 
-        jCheckBox4.setText("11-20");
+        cH_11.setText("11-20");
 
-        jCheckBox5.setText("21-30");
+        cH_21.setText("21-30");
 
-        jCheckBox6.setText("31 o más");
+        cH_31.setText("31 o más");
 
         javax.swing.GroupLayout jPanelPromedioComprasLayout = new javax.swing.GroupLayout(jPanelPromedioCompras);
         jPanelPromedioCompras.setLayout(jPanelPromedioComprasLayout);
@@ -183,23 +183,23 @@ public class RegistrarCliente extends javax.swing.JFrame {
             .addGroup(jPanelPromedioComprasLayout.createSequentialGroup()
                 .addGap(47, 47, 47)
                 .addGroup(jPanelPromedioComprasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jCheckBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCheckBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cH_31, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cH_21, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cH_11, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cH_uno, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(71, Short.MAX_VALUE))
         );
         jPanelPromedioComprasLayout.setVerticalGroup(
             jPanelPromedioComprasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelPromedioComprasLayout.createSequentialGroup()
                 .addGap(8, 8, 8)
-                .addComponent(jCheckBox3)
+                .addComponent(cH_uno)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox4)
+                .addComponent(cH_11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox5)
+                .addComponent(cH_21)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jCheckBox6)
+                .addComponent(cH_31)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -298,9 +298,9 @@ public class RegistrarCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombClienteActionPerformed
 
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+    private void cH_OtroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cH_OtroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
+    }//GEN-LAST:event_cH_OtroActionPerformed
 
     private void txtdocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdocumentoActionPerformed
         // TODO add your handling code here:
@@ -310,9 +310,9 @@ public class RegistrarCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombCliente2ActionPerformed
 
-    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
+    private void cH_unoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cH_unoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox3ActionPerformed
+    }//GEN-LAST:event_cH_unoActionPerformed
 
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
         // TODO add your handling code here:
@@ -324,7 +324,37 @@ public class RegistrarCliente extends javax.swing.JFrame {
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
         // TODO add your handling code here:
          DAOclientes clientCont = ClientesController.getInstance();
-        clientCont.AgregarCliente(txtNombCliente.getText());
+        String nombCliente= txtNombCliente.getText();
+        String nombCliente2= txtNombCliente2.getText();
+        String ApeCliente=txtApellido.getText();
+        String ApeCliente2=txtApellido2.getText();
+        String TI="";
+        if (cH_CC.isSelected()){
+            TI=" Cédula de Ciudadanía";
+        }else{
+            TI="Otro";
+        }
+        String NCM="";
+        if(cH_uno.isSelected()){
+            NCM="1 a 10 compras";
+        }else{
+            if(cH_11.isSelected()){
+                NCM="11 a 20 compras";
+            }else{
+                if(cH_21.isSelected()){
+                    NCM="21 a 30 compras";
+                }else{
+                    if(cH_31.isSelected()){
+                        NCM="31 o más compras";
+                    }
+                }
+            }
+        }
+            
+      clientCont.AgregarCliente(nombCliente,nombCliente2 , ApeCliente, ApeCliente2, TI, NCM);
+        
+         
+         
                 
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
@@ -374,12 +404,12 @@ public class RegistrarCliente extends javax.swing.JFrame {
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnRegistrar;
     private javax.swing.JButton btnRegresar;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
+    private javax.swing.JCheckBox cH_11;
+    private javax.swing.JCheckBox cH_21;
+    private javax.swing.JCheckBox cH_31;
+    private javax.swing.JCheckBox cH_CC;
+    private javax.swing.JCheckBox cH_Otro;
+    private javax.swing.JCheckBox cH_uno;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelApellido;
