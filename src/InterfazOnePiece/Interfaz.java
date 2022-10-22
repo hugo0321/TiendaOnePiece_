@@ -270,6 +270,7 @@ public class Interfaz extends javax.swing.JFrame {
         InterfazVentas interfazventas= InterfazVentas.getInstance();
         interfazventas.setVisible(true);
         this.dispose();
+        JOptionPane.showMessageDialog(null,"Recuerde iniciar una nueva venta");
     }//GEN-LAST:event_jMenuItem15ActionPerformed
 
     /**
