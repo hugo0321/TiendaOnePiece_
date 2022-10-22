@@ -76,7 +76,7 @@ public class MirarClientes extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
-        jPanel1.setLayout(new java.awt.GridLayout());
+        jPanel1.setLayout(new java.awt.GridLayout(1, 0));
 
         jButton1.setText("Agregar Nuevo Cliente");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -86,7 +86,7 @@ public class MirarClientes extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1);
 
-        jButton2.setText("Mostrar Lista Clientes");
+        jButton2.setText("Actualizar Lista Clientes");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -94,7 +94,12 @@ public class MirarClientes extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2);
 
-        jButton3.setText("Regresar");
+        jButton3.setText("Regresar al Menú");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton3);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_END);
@@ -113,6 +118,13 @@ public class MirarClientes extends javax.swing.JFrame {
        interfaz.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+          Interfaz interfaz = Interfaz.getInstance();
+        interfaz.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

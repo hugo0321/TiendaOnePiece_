@@ -6,6 +6,7 @@ package InterfazOnePiece;
 
 import RegistrarCliente.MirarClientes;
 import RegistrarCliente.RegistrarCliente;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -60,7 +61,6 @@ public class Interfaz extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem14 = new javax.swing.JMenuItem();
-        jMenuItem15 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
@@ -84,7 +84,7 @@ public class Interfaz extends javax.swing.JFrame {
         jTextField2.setEditable(false);
         jTextField2.setBackground(new java.awt.Color(199, 236, 238));
         jTextField2.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 14)); // NOI18N
-        jTextField2.setText("Encuentra lo mejor de tu anime favorito en nuestro menú superior");
+        jTextField2.setText("Encuentra lo necesario para el trabajo en el menú superior");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -149,6 +149,7 @@ public class Interfaz extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem1);
 
+        jMenuItem16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/usuario.png"))); // NOI18N
         jMenuItem16.setText("Lista de Clientes");
         jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,20 +173,22 @@ public class Interfaz extends javax.swing.JFrame {
         jMenu2.setText("Mi Perfil");
 
         jMenuItem14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/seleccione.png"))); // NOI18N
-        jMenuItem14.setText("Iniciar Sesión");
-        jMenu2.add(jMenuItem14);
-
-        jMenuItem15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/usuario.png"))); // NOI18N
-        jMenuItem15.setText("Crear Cuenta");
-        jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItem14.setText("Información del Perfil");
+        jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem15ActionPerformed(evt);
+                jMenuItem14ActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem15);
+        jMenu2.add(jMenuItem14);
 
+        jMenuItem13.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.SHIFT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/boton.png"))); // NOI18N
         jMenuItem13.setText("Cerrar Sesión");
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem13);
 
         jMenuBar1.add(jMenu2);
@@ -224,10 +227,6 @@ public class Interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
 
-    private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem15ActionPerformed
-
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
          RegistrarCliente registrarcliente = RegistrarCliente.getInstance();
@@ -246,6 +245,16 @@ public class Interfaz extends javax.swing.JFrame {
         mirarclientes.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuItem16ActionPerformed
+
+    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+        InicioSesion iniciosesion= InicioSesion.getInstance();
+        iniciosesion.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem13ActionPerformed
+
+    private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
+        JOptionPane.showMessageDialog(this, "Los datos de la cuenta son :"+"\n"+"Usuario: ADMIN"+"\n"+"Contraseña: onepiece");
+    }//GEN-LAST:event_jMenuItem14ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -267,7 +276,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;
-    private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;

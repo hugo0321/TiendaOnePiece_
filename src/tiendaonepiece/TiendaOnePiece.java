@@ -4,6 +4,7 @@
  */
 package tiendaonepiece;
 
+import InterfazOnePiece.InicioSesion;
 import InterfazOnePiece.Interfaz;
 
 /**
@@ -17,7 +18,7 @@ public class TiendaOnePiece {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Interfaz interfaz= Interfaz.getInstance();
+        InicioSesion interfaz= InicioSesion.getInstance();
         interfaz.setVisible(true);
     }
     
