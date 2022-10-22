@@ -5,6 +5,7 @@
 package InterfazOnePiece;
 
 import RegistrarCliente.MirarClientes;
+import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 
 /**
@@ -48,6 +49,7 @@ public class InicioSesion extends javax.swing.JFrame {
         lblFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Tienda One Piece");
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -89,6 +91,11 @@ public class InicioSesion extends javax.swing.JFrame {
         jPasswordField1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPasswordField1MouseClicked(evt);
+            }
+        });
+        jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jPasswordField1KeyReleased(evt);
             }
         });
         jPanel2.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 370, 150, -1));
@@ -166,7 +173,7 @@ public class InicioSesion extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1MouseClicked
 
     private void btnIngresarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnIngresarKeyPressed
-   
+    
     }//GEN-LAST:event_btnIngresarKeyPressed
 
     private void btnIngresarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_btnIngresarKeyReleased
@@ -184,6 +191,21 @@ public class InicioSesion extends javax.swing.JFrame {
     private void btnAyudaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAyudaMouseEntered
       btnAyuda.setBackground(new java.awt.Color(255, 255, 255));
     }//GEN-LAST:event_btnAyudaMouseEntered
+
+    private void jPasswordField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyReleased
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
+      String usuario="ADMIN";
+       String contraseña="onepiece";
+       String Pass= new String(jPasswordField1.getPassword());
+       if(txtUsuario.getText().equals(usuario)&& Pass.equals(contraseña)){
+           Interfaz interfaz= Interfaz.getInstance();
+        interfaz.setVisible(true);
+        this.dispose();
+       }else{
+           JOptionPane.showMessageDialog(null,"Usuario/contraseña incorrectos");
+       }
+}
+    }//GEN-LAST:event_jPasswordField1KeyReleased
 
     /**
      * @param args the command line arguments

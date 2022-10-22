@@ -6,6 +6,7 @@ package InterfazOnePiece;
 
 import RegistrarCliente.MirarClientes;
 import RegistrarCliente.RegistrarCliente;
+import VentasArtículos.InterfazVentas;
 import javax.swing.JOptionPane;
 
 /**
@@ -56,6 +57,7 @@ public class Interfaz extends javax.swing.JFrame {
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuItem15 = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem16 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -138,6 +140,14 @@ public class Interfaz extends javax.swing.JFrame {
         jMenu3.add(jMenuItem8);
 
         jMenu1.add(jMenu3);
+
+        jMenuItem15.setText("Realizar venta");
+        jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem15ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem15);
 
         jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/cart.png"))); // NOI18N
         jMenuItem1.setText("Registrar cliente");
@@ -256,6 +266,12 @@ public class Interfaz extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(this, "Los datos de la cuenta son :"+"\n"+"Usuario: ADMIN"+"\n"+"Contraseña: onepiece");
     }//GEN-LAST:event_jMenuItem14ActionPerformed
 
+    private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
+        InterfazVentas interfazventas= InterfazVentas.getInstance();
+        interfazventas.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem15ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -276,6 +292,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;
+    private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem16;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
