@@ -4,6 +4,9 @@
  */
 package tiendaonepiece;
 
+import InterfazOnePiece.InicioSesion;
+import InterfazOnePiece.Interfaz;
+
 /**
  *
  * @author Hugo
@@ -15,6 +18,8 @@ public class TiendaOnePiece {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        InicioSesion interfaz= InicioSesion.getInstance();
+        interfaz.setVisible(true);
     }
     
 }
