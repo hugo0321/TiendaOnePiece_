@@ -28,6 +28,7 @@ public class InterfazVentas extends javax.swing.JFrame {
      */
     private InterfazVentas() {
         initComponents();
+        this.setLocationRelativeTo(null);
        
        this.setTitle("Ventas One Piece") ;
        DefaultComboBoxModel comboModel= new DefaultComboBoxModel(productos);
