@@ -7,6 +7,7 @@ package RegistrarCliente;
 import ControllerRegistroCLiente.ClientesController;
 import DAOClientes.DAOclientes;
 import InterfazOnePiece.Interfaz;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -58,10 +59,12 @@ public class MirarClientes extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Lista Clientes One Piece");
         getContentPane().add(jLabel1, java.awt.BorderLayout.PAGE_START);
 
+        jTable1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -118,6 +121,7 @@ public class MirarClientes extends javax.swing.JFrame {
         RegistrarCliente interfaz = RegistrarCliente.getInstance();
        interfaz.setVisible(true);
        this.dispose();
+       JOptionPane.showMessageDialog(null,"Recuerde activar las letras MAYÚSCULAS");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

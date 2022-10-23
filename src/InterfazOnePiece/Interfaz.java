@@ -142,6 +142,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         jMenu1.add(jMenu3);
 
+        jMenuItem15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/accesorio.png"))); // NOI18N
         jMenuItem15.setText("Realizar venta");
         jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -243,6 +244,7 @@ public class Interfaz extends javax.swing.JFrame {
          RegistrarCliente registrarcliente = RegistrarCliente.getInstance();
        registrarcliente.setVisible(true);
        this.dispose();
+       JOptionPane.showMessageDialog(null,"Recuerde activar las letras MAYÚSCULAS");
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
