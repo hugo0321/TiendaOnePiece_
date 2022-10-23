@@ -21,6 +21,7 @@ public class MirarClientes extends javax.swing.JFrame {
      
     private MirarClientes() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
     
     private void ActuListaClientes(){

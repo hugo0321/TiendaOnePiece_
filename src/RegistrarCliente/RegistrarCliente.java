@@ -23,6 +23,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
      */
     private RegistrarCliente() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
     
     public static RegistrarCliente getInstance(){

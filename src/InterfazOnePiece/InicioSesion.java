@@ -21,6 +21,7 @@ public class InicioSesion extends javax.swing.JFrame {
      */
     private InicioSesion() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
      public static InicioSesion getInstance(){
         if(iniciosesion==null)

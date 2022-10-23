@@ -20,6 +20,7 @@ public class Interfaz extends javax.swing.JFrame {
      */
     private Interfaz() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     public static Interfaz getInstance(){
@@ -260,6 +261,7 @@ public class Interfaz extends javax.swing.JFrame {
         InicioSesion iniciosesion= InicioSesion.getInstance();
         iniciosesion.setVisible(true);
         this.dispose();
+        JOptionPane.showMessageDialog(null,"Hasta pronto");
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
@@ -270,6 +272,7 @@ public class Interfaz extends javax.swing.JFrame {
         InterfazVentas interfazventas= InterfazVentas.getInstance();
         interfazventas.setVisible(true);
         this.dispose();
+        JOptionPane.showMessageDialog(null,"Recuerde iniciar una nueva venta");
     }//GEN-LAST:event_jMenuItem15ActionPerformed
 
     /**

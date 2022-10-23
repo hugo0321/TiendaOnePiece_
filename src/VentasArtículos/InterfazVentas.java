@@ -8,6 +8,7 @@ import InterfazOnePiece.InicioSesion;
 import InterfazOnePiece.Interfaz;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -27,6 +28,7 @@ public class InterfazVentas extends javax.swing.JFrame {
      */
     private InterfazVentas() {
         initComponents();
+        this.setLocationRelativeTo(null);
        
        this.setTitle("Ventas One Piece") ;
        DefaultComboBoxModel comboModel= new DefaultComboBoxModel(productos);
@@ -161,7 +163,12 @@ public class InterfazVentas extends javax.swing.JFrame {
         });
 
         btnQuitar.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        btnQuitar.setText("Modificar producto");
+        btnQuitar.setText("Nueva Venta");
+        btnQuitar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnQuitarActionPerformed(evt);
+            }
+        });
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jButton1.setText("Regresar al Menú");
@@ -317,7 +324,20 @@ public class InterfazVentas extends javax.swing.JFrame {
         interfaz.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
-   public boolean buscarVenta(ventas nueva){
+
+    private void btnQuitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuitarActionPerformed
+       modelo.setRowCount(0);
+         resetVars();   
+      lblSubtotal.setText(laMoneda(0));
+       lblIva.setText(laMoneda(0));
+       lblTotal.setText(laMoneda(0));
+         JOptionPane.showMessageDialog(null,"Ya puede continuar");
+   
+    }//GEN-LAST:event_btnQuitarActionPerformed
+   private void resetVars(){
+       listaVentas.clear();
+   }
+    public boolean buscarVenta(ventas nueva){
        for(ventas v: listaVentas){
            if(v.getId()==nueva.getId()){
                int nuevaCantidad=v.getCantidad()+nueva.getCantidad();
