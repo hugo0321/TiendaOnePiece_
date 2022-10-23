@@ -22,6 +22,7 @@ public class InicioSesion extends javax.swing.JFrame {
     private InicioSesion() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
      public static InicioSesion getInstance(){
         if(iniciosesion==null)
@@ -50,7 +51,7 @@ public class InicioSesion extends javax.swing.JFrame {
         lblFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Tienda One Piece");
+        setTitle("Tienda One Piece v1.1");
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

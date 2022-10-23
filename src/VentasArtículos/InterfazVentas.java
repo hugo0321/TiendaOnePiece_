@@ -29,8 +29,9 @@ public class InterfazVentas extends javax.swing.JFrame {
     private InterfazVentas() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setResizable(false);
        
-       this.setTitle("Ventas One Piece") ;
+       this.setTitle("Facturación One Piece v1.1") ;
        DefaultComboBoxModel comboModel= new DefaultComboBoxModel(productos);
        cboProducto.setModel(comboModel);
        modelo.addColumn("Descripción");
@@ -78,6 +79,7 @@ public class InterfazVentas extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Facturación One Piece v1.1");
         setBackground(new java.awt.Color(204, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 36)); // NOI18N
@@ -300,7 +302,6 @@ public class InterfazVentas extends javax.swing.JFrame {
                         .addComponent(btnQuitar)
                         .addGap(37, 37, 37))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton1)
@@ -339,6 +340,7 @@ public class InterfazVentas extends javax.swing.JFrame {
       Interfaz interfaz= Interfaz.getInstance();
         interfaz.setVisible(true);
         this.dispose();
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnQuitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuitarActionPerformed

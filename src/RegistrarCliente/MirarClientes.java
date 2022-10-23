@@ -7,6 +7,7 @@ package RegistrarCliente;
 import ControllerRegistroCLiente.ClientesController;
 import DAOClientes.DAOclientes;
 import InterfazOnePiece.Interfaz;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -23,6 +24,7 @@ public class MirarClientes extends javax.swing.JFrame {
     private MirarClientes() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
     
     private void ActuListaClientes(){
@@ -58,6 +60,7 @@ public class MirarClientes extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Lista One Piece v1.1");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

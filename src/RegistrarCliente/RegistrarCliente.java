@@ -25,6 +25,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
     private RegistrarCliente() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
     
     public static RegistrarCliente getInstance(){
@@ -67,6 +68,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Registro One Piece v1.1");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setText("Registro de Cliente");
