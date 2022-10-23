@@ -4,6 +4,7 @@
  */
 package InterfazOnePiece;
 
+import MenuAyuda.TerminosCondiciones;
 import RegistrarCliente.MirarClientes;
 import RegistrarCliente.RegistrarCliente;
 import VentasArtículos.InterfazVentas;
@@ -21,6 +22,7 @@ public class Interfaz extends javax.swing.JFrame {
     private Interfaz() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     public static Interfaz getInstance(){
@@ -72,6 +74,7 @@ public class Interfaz extends javax.swing.JFrame {
         jMenuItem10 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Menú One Piece v1.1");
 
         jPanel1.setBackground(new java.awt.Color(199, 236, 238));
         jPanel1.setLayout(new java.awt.GridLayout(2, 1, 2, 0));
@@ -213,6 +216,11 @@ public class Interfaz extends javax.swing.JFrame {
 
         jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/buscar.png"))); // NOI18N
         jMenuItem11.setText("Términos y Condiciones");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem11);
 
         jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/apreton-de-manos.png"))); // NOI18N
@@ -276,6 +284,12 @@ public class Interfaz extends javax.swing.JFrame {
         this.dispose();
         JOptionPane.showMessageDialog(null,"Recuerde iniciar una nueva venta");
     }//GEN-LAST:event_jMenuItem15ActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+        TerminosCondiciones terminoscondiciones= TerminosCondiciones.getInstance();
+        terminoscondiciones.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     /**
      * @param args the command line arguments
