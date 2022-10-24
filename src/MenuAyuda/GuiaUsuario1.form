@@ -104,7 +104,7 @@
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Hugo\Dropbox\PC\Desktop\proyecto APO\InicioSesion.png"/>
+              <Image iconType="3" name="/MenuAyuda/InicioSesion.png"/>
             </Property>
           </Properties>
           <Constraints>
@@ -129,7 +129,7 @@
         <Component class="javax.swing.JLabel" name="lblFondo">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Hugo\Dropbox\PC\Desktop\proyecto APO\fondoGuiaUsuario.jpg"/>
+              <Image iconType="3" name="/MenuAyuda/fondoGuiaUsuario.jpg"/>
             </Property>
           </Properties>
           <Constraints>

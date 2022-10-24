@@ -69,7 +69,7 @@ public static GuiaUsuario1 getInstance(){
         lblTitulo.setText("Guía de Usuario");
         jPanel1.add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, -10, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Hugo\\Dropbox\\PC\\Desktop\\proyecto APO\\InicioSesion.png")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuAyuda/InicioSesion.png"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
 
         jButton2.setText("Página anterior");
@@ -80,7 +80,7 @@ public static GuiaUsuario1 getInstance(){
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 722, 120, 30));
 
-        lblFondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Hugo\\Dropbox\\PC\\Desktop\\proyecto APO\\fondoGuiaUsuario.jpg")); // NOI18N
+        lblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuAyuda/fondoGuiaUsuario.jpg"))); // NOI18N
         jPanel1.add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 790, 720));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
