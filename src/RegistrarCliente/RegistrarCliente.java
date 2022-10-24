@@ -51,6 +51,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
         JpanelTipoDocumento = new javax.swing.JPanel();
         cH_CC = new javax.swing.JCheckBox();
         cH_Otro = new javax.swing.JCheckBox();
+        txtTipoDocumento = new javax.swing.JTextField();
         JpanelNumeroDocumento = new javax.swing.JPanel();
         txtdocumento = new javax.swing.JTextField();
         jPanelNombre2 = new javax.swing.JPanel();
@@ -76,7 +77,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Nombre :"));
         jPanel1.setLayout(new java.awt.GridLayout(1, 0));
 
-        txtNombCliente.setText("Escriba aquí");
+        txtNombCliente.setText("ESCRIBA AQUÍ");
         txtNombCliente.setBorder(null);
         txtNombCliente.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -98,11 +99,16 @@ public class RegistrarCliente extends javax.swing.JFrame {
         jPanelApellido2.setBorder(javax.swing.BorderFactory.createTitledBorder("Apellido 2:"));
         jPanelApellido2.setLayout(new java.awt.GridLayout(1, 0));
 
-        txtApellido.setText("Escriba aquí");
+        txtApellido.setText("ESCRIBA AQUÍ");
         txtApellido.setBorder(null);
         txtApellido.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txtApellidoMouseClicked(evt);
+            }
+        });
+        txtApellido.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtApellidoKeyTyped(evt);
             }
         });
         jPanelApellido2.add(txtApellido);
@@ -110,16 +116,39 @@ public class RegistrarCliente extends javax.swing.JFrame {
         JpanelTipoDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder("Tipo Documento de Identidad"));
         JpanelTipoDocumento.setLayout(new java.awt.GridLayout(1, 0));
 
-        cH_CC.setText("Cédula de ciudadania");
+        cH_CC.setText("CC");
         JpanelTipoDocumento.add(cH_CC);
 
         cH_Otro.setText("Otro");
+        cH_Otro.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                cH_OtroStateChanged(evt);
+            }
+        });
         cH_Otro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cH_OtroActionPerformed(evt);
             }
         });
         JpanelTipoDocumento.add(cH_Otro);
+
+        txtTipoDocumento.setText("CUÁL");
+        txtTipoDocumento.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtTipoDocumentoMouseClicked(evt);
+            }
+        });
+        txtTipoDocumento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTipoDocumentoActionPerformed(evt);
+            }
+        });
+        txtTipoDocumento.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTipoDocumentoKeyTyped(evt);
+            }
+        });
+        JpanelTipoDocumento.add(txtTipoDocumento);
 
         JpanelNumeroDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder("Número Documento"));
         JpanelNumeroDocumento.setLayout(new java.awt.GridLayout(1, 0));
@@ -145,7 +174,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
         jPanelNombre2.setBorder(javax.swing.BorderFactory.createTitledBorder("Nombre 2 :"));
         jPanelNombre2.setLayout(new java.awt.GridLayout(1, 0));
 
-        txtNombCliente2.setText("Opcional");
+        txtNombCliente2.setText("OPCIONAL");
         txtNombCliente2.setBorder(null);
         txtNombCliente2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -157,16 +186,26 @@ public class RegistrarCliente extends javax.swing.JFrame {
                 txtNombCliente2ActionPerformed(evt);
             }
         });
+        txtNombCliente2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombCliente2KeyTyped(evt);
+            }
+        });
         jPanelNombre2.add(txtNombCliente2);
 
         jPanelApellido.setBorder(javax.swing.BorderFactory.createTitledBorder("Apellido"));
         jPanelApellido.setLayout(new java.awt.GridLayout(1, 0));
 
-        txtApellido2.setText("Escriba aquí");
+        txtApellido2.setText("ESCRIBA AQUÍ");
         txtApellido2.setBorder(null);
         txtApellido2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txtApellido2MouseClicked(evt);
+            }
+        });
+        txtApellido2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtApellido2KeyTyped(evt);
             }
         });
         jPanelApellido.add(txtApellido2);
@@ -244,13 +283,13 @@ public class RegistrarCliente extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32)
-                        .addComponent(jPanelNombre2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
-                        .addComponent(jPanelApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36)
-                        .addComponent(jPanelApellido2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanelNombre2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                        .addComponent(jPanelApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42)
+                        .addComponent(jPanelApellido2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(24, 24, 24))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(154, 154, 154)
@@ -260,8 +299,9 @@ public class RegistrarCliente extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(JpanelTipoDocumento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(JpanelNumeroDocumento, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(81, 81, 81)
+                                .addComponent(JpanelNumeroDocumento, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jPanelPromedioCompras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -285,10 +325,10 @@ public class RegistrarCliente extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanelApellido2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelApellido, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelNombre2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                    .addComponent(jPanelNombre2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelApellido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelApellido2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(JpanelTipoDocumento, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -302,7 +342,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
                         .addGap(28, 28, 28)
                         .addComponent(btnEditar))
                     .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(btnRegresar)
                 .addContainerGap())
         );
@@ -349,7 +389,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
             TI=" Cédula de Ciudadanía";
         }else{
             if(cH_Otro.isSelected()){
-            TI="Otro";
+            TI=txtTipoDocumento.getText();
         }
         }
         String numident=txtdocumento.getText();
@@ -384,6 +424,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
         txtApellido.setText("");
         txtApellido2.setText("");
         txtdocumento.setText("");
+        txtTipoDocumento.setText("CUÁL");
         cH_CC.setSelected(false);
         cH_Otro.setSelected(false);
         cH_uno.setSelected(false);
@@ -441,6 +482,68 @@ public class RegistrarCliente extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_txtNombClienteKeyTyped
 
+    private void txtTipoDocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTipoDocumentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTipoDocumentoActionPerformed
+
+    private void cH_OtroStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_cH_OtroStateChanged
+              if(cH_Otro.isSelected()==false){
+    txtTipoDocumento.setEnabled(false);
+} else{
+    txtTipoDocumento.setEnabled(true);
+}  
+    }//GEN-LAST:event_cH_OtroStateChanged
+
+    private void txtTipoDocumentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtTipoDocumentoMouseClicked
+         txtTipoDocumento.setText("");
+    }//GEN-LAST:event_txtTipoDocumentoMouseClicked
+
+    private void txtNombCliente2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombCliente2KeyTyped
+        // TODO add your handling code here:
+         int key = evt.getKeyChar();
+
+    boolean mayusculas = key >= 65 && key <= 90;
+          
+     if (!(mayusculas ))
+    {
+        evt.consume();
+    }
+    }//GEN-LAST:event_txtNombCliente2KeyTyped
+
+    private void txtApellido2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellido2KeyTyped
+        // TODO add your handling code here:
+              int key = evt.getKeyChar();
+
+    boolean mayusculas = key >= 65 && key <= 90;
+          
+     if (!(mayusculas ))
+    {
+        evt.consume();
+    }
+    }//GEN-LAST:event_txtApellido2KeyTyped
+
+    private void txtApellidoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoKeyTyped
+              int key = evt.getKeyChar();
+
+    boolean mayusculas = key >= 65 && key <= 90;
+          
+     if (!(mayusculas ))
+    {
+        evt.consume();
+    }
+    }//GEN-LAST:event_txtApellidoKeyTyped
+
+    private void txtTipoDocumentoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTipoDocumentoKeyTyped
+              int key = evt.getKeyChar();
+
+    boolean mayusculas = key >= 65 && key <= 90;
+          
+     if (!(mayusculas ))
+    {
+        evt.consume();
+    }
+    }//GEN-LAST:event_txtTipoDocumentoKeyTyped
+
     /**
      *
      */
@@ -470,6 +573,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
     private javax.swing.JTextField txtApellido2;
     private javax.swing.JTextField txtNombCliente;
     private javax.swing.JTextField txtNombCliente2;
+    private javax.swing.JTextField txtTipoDocumento;
     private javax.swing.JTextField txtdocumento;
     // End of variables declaration//GEN-END:variables
 }
