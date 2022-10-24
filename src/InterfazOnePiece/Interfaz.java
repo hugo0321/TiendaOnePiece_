@@ -4,6 +4,8 @@
  */
 package InterfazOnePiece;
 
+import MenuAyuda.GuiaUsuario;
+import MenuAyuda.GuiaUsuario1;
 import MenuAyuda.TerminosCondiciones;
 import RegistrarCliente.MirarClientes;
 import RegistrarCliente.RegistrarCliente;
@@ -68,7 +70,9 @@ public class Interfaz extends javax.swing.JFrame {
         jMenuItem14 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
+        jMenu5 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuItem18 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
         jMenuItem12 = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
@@ -210,9 +214,26 @@ public class Interfaz extends javax.swing.JFrame {
 
         jMenu4.setText("Ayuda");
 
-        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/libro-de-instrucciones.png"))); // NOI18N
-        jMenuItem9.setText("Guía de usuario");
-        jMenu4.add(jMenuItem9);
+        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/libro-de-instrucciones.png"))); // NOI18N
+        jMenu5.setText("Guía de usuario");
+
+        jMenuItem9.setText("Menú Principal");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem9);
+
+        jMenuItem18.setText("Olvidé la contraseña");
+        jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem18ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem18);
+
+        jMenu4.add(jMenu5);
 
         jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/buscar.png"))); // NOI18N
         jMenuItem11.setText("Términos y Condiciones");
@@ -291,6 +312,18 @@ public class Interfaz extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+       GuiaUsuario guiausuario= GuiaUsuario.getInstance();
+        guiausuario.setVisible(true);
+        this.dispose(); 
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
+      GuiaUsuario1 guiausuario1= GuiaUsuario1.getInstance();
+        guiausuario1.setVisible(true);
+        this.dispose(); 
+    }//GEN-LAST:event_jMenuItem18ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -304,6 +337,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
@@ -313,6 +347,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem16;
+    private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;

@@ -31,6 +31,7 @@ public class InicioSesion extends javax.swing.JFrame {
     }
     
 String contraseña="onepiece";
+ String usuario="ADMIN";
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -125,6 +126,11 @@ String contraseña="onepiece";
         jPanel2.add(lblUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, -1, -1));
 
         lblicono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/inicio sesion1.png"))); // NOI18N
+        lblicono.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbliconoMouseClicked(evt);
+            }
+        });
         jPanel2.add(lblicono, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, -20, -1, -1));
 
         jButton1.setText("Nueva Contraseña");
@@ -162,7 +168,7 @@ String contraseña="onepiece";
     }//GEN-LAST:event_txtUsuarioActionPerformed
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
-       String usuario="ADMIN";
+       
        
        String Pass= new String(jPasswordField1.getPassword());
        if(txtUsuario.getText().equals(usuario)&& Pass.equals(contraseña)){
@@ -170,7 +176,7 @@ String contraseña="onepiece";
         interfaz.setVisible(true);
         this.dispose();
        }else{
-           JOptionPane.showMessageDialog(null,"Usuario/contraseña incorrectos");
+           JOptionPane.showMessageDialog(null,"Usuario/contraseña incorrectos"+"\n"+"Presione ESPACIO para continuar");
        }
     }//GEN-LAST:event_btnIngresarActionPerformed
 
@@ -192,7 +198,7 @@ String contraseña="onepiece";
     }//GEN-LAST:event_btnIngresarKeyReleased
 
     private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
-        JOptionPane.showMessageDialog(this, "Usuario: ADMIN"+"\n"+"Contraseña: Nombre del anime sin espacio y minúsculas");
+        JOptionPane.showMessageDialog(this, "Usuario: ADMIN"+"\n"+"Contraseña: Nombre del anime sin espacio y minúsculas"+"\n"+"si por alguna razón cambió y olvidó la contraseña dirijase a la guía de usuario"+"\n"+"en la sección de ayuda del menú principal");
     }//GEN-LAST:event_btnAyudaActionPerformed
 
     private void btnAyudaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAyudaMouseExited
@@ -205,7 +211,7 @@ String contraseña="onepiece";
 
     private void jPasswordField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyReleased
         if(evt.getKeyCode()==KeyEvent.VK_ENTER){
-      String usuario="ADMIN";
+     
        
        String Pass= new String(jPasswordField1.getPassword());
        if(txtUsuario.getText().equals(usuario)&& Pass.equals(contraseña)){
@@ -213,7 +219,7 @@ String contraseña="onepiece";
         interfaz.setVisible(true);
         this.dispose();
        }else{
-           JOptionPane.showMessageDialog(null,"Usuario/contraseña incorrectos");
+           JOptionPane.showMessageDialog(null,"Usuario/contraseña incorrectos"+"\n"+"Presione ESPACIO para continuar");
        }
 }
     }//GEN-LAST:event_jPasswordField1KeyReleased
@@ -222,15 +228,34 @@ String contraseña="onepiece";
         String contra= JOptionPane.showInputDialog("Introduzca la antigüa contraseña");
         cambiarContraseña(contra);
     }//GEN-LAST:event_jButton1ActionPerformed
+//public String contraseñaOlvidada(String contra, String Usuario){
+    
+//}
+    private void lbliconoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbliconoMouseClicked
+        String Usuario= JOptionPane.showInputDialog("Introduzca el usuario de la cuenta principal");
+        if(Usuario.equals(usuario)){
+            String contra= JOptionPane.showInputDialog("Introduzca la contraseña");
+            if(contra.equals("onepiece")){
+                JOptionPane.showMessageDialog(null,"la contraseña se ha reestablecido con éxito"+"\n"+"Presione ESPACIO para continuar");
+                
+                contraseña="onepiece";
+               // contraseñaOlvidada(contra,Usuario);
+            }else{
+                JOptionPane.showMessageDialog(null,"Contraseña incorrecta"+"\n"+"Presione ESPACIO para continuar");
+            }
+        }else{
+            JOptionPane.showMessageDialog(null,"Usuario incorrecto"+"\n"+"Presione ESPACIO para continuar");
+        }
+    }//GEN-LAST:event_lbliconoMouseClicked
 public String cambiarContraseña(String contra){
  
     if(contra.equals(contraseña)){
         
         String entradaUsuario= JOptionPane.showInputDialog("Introduzca la nueva contraseña :");
         contraseña=entradaUsuario;
-        JOptionPane.showMessageDialog(null,"La nueva contraseña es: "+contraseña);
+        JOptionPane.showMessageDialog(null,"La nueva contraseña es: "+contraseña+"\n"+"Presione ESPACIO para continuar");
     }else{
-        JOptionPane.showMessageDialog(null,"La contraseña que escribió no coincide con la antigüa");
+        JOptionPane.showMessageDialog(null,"La contraseña que escribió no coincide con la antigüa"+"\n"+"Presione ESPACIO para continuar");
     }
     return contraseña;
 }
