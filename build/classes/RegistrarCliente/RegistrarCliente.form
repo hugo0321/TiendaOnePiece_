@@ -28,13 +28,13 @@
               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jPanel1" min="-2" pref="101" max="-2" attributes="0"/>
+                      <Component id="jPanel1" min="-2" pref="102" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                      <Component id="jPanelNombre2" min="-2" pref="101" max="-2" attributes="0"/>
-                      <EmptySpace pref="72" max="32767" attributes="0"/>
-                      <Component id="jPanelApellido" min="-2" pref="92" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                      <Component id="jPanelApellido2" min="-2" pref="95" max="-2" attributes="0"/>
+                      <Component id="jPanelNombre2" min="-2" pref="102" max="-2" attributes="0"/>
+                      <EmptySpace pref="47" max="32767" attributes="0"/>
+                      <Component id="jPanelApellido" min="-2" pref="102" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      <Component id="jPanelApellido2" min="-2" pref="102" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
@@ -44,10 +44,11 @@
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
                               <Component id="JpanelTipoDocumento" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
                               <Component id="JpanelNumeroDocumento" min="-2" pref="130" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -82,10 +83,10 @@
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jPanelApellido2" max="32767" attributes="0"/>
-                  <Component id="jPanelApellido" alignment="1" max="32767" attributes="0"/>
-                  <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jPanelNombre2" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jPanel1" pref="48" max="32767" attributes="0"/>
+                  <Component id="jPanelNombre2" max="32767" attributes="0"/>
+                  <Component id="jPanelApellido" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jPanelApellido2" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -103,7 +104,7 @@
                   </Group>
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="42" max="32767" attributes="0"/>
+              <EmptySpace pref="33" max="32767" attributes="0"/>
               <Component id="btnRegresar" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -135,7 +136,7 @@
       <SubComponents>
         <Component class="javax.swing.JTextField" name="txtNombCliente">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Escriba aqu&#xed;"/>
+            <Property name="text" type="java.lang.String" value="ESCRIBA AQU&#xcd;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -164,13 +165,14 @@
       <SubComponents>
         <Component class="javax.swing.JTextField" name="txtApellido">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Escriba aqu&#xed;"/>
+            <Property name="text" type="java.lang.String" value="ESCRIBA AQU&#xcd;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txtApellidoMouseClicked"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtApellidoKeyTyped"/>
           </Events>
         </Component>
       </SubComponents>
@@ -191,7 +193,7 @@
       <SubComponents>
         <Component class="javax.swing.JCheckBox" name="cH_CC">
           <Properties>
-            <Property name="text" type="java.lang.String" value="C&#xe9;dula de ciudadania"/>
+            <Property name="text" type="java.lang.String" value="CC"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JCheckBox" name="cH_Otro">
@@ -199,7 +201,18 @@
             <Property name="text" type="java.lang.String" value="Otro"/>
           </Properties>
           <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="cH_OtroStateChanged"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cH_OtroActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtTipoDocumento">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="CU&#xc1;L"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txtTipoDocumentoMouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTipoDocumentoActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtTipoDocumentoKeyTyped"/>
           </Events>
         </Component>
       </SubComponents>
@@ -246,7 +259,7 @@
       <SubComponents>
         <Component class="javax.swing.JTextField" name="txtNombCliente2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Opcional"/>
+            <Property name="text" type="java.lang.String" value="OPCIONAL"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
@@ -254,6 +267,7 @@
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txtNombCliente2MouseClicked"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombCliente2ActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtNombCliente2KeyTyped"/>
           </Events>
         </Component>
       </SubComponents>
@@ -274,13 +288,14 @@
       <SubComponents>
         <Component class="javax.swing.JTextField" name="txtApellido2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Escriba aqu&#xed;"/>
+            <Property name="text" type="java.lang.String" value="ESCRIBA AQU&#xcd;"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txtApellido2MouseClicked"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtApellido2KeyTyped"/>
           </Events>
         </Component>
       </SubComponents>
