@@ -275,7 +275,7 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
-        JOptionPane.showMessageDialog(this, "Los datos de la cuenta son :"+"\n"+"Usuario: ADMIN"+"\n"+"Contraseña: onepiece");
+        JOptionPane.showMessageDialog(this, "Los datos de la cuenta principal son :"+"\n"+"Usuario: ADMIN"+"\n"+"Contraseña: onepiece");
     }//GEN-LAST:event_jMenuItem14ActionPerformed
 
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed

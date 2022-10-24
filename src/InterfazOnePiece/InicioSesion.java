@@ -30,7 +30,7 @@ public class InicioSesion extends javax.swing.JFrame {
         return iniciosesion;
     }
     
-
+String contraseña="onepiece";
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -48,6 +48,7 @@ public class InicioSesion extends javax.swing.JFrame {
         lblContraseña = new javax.swing.JLabel();
         lblUsuario = new javax.swing.JLabel();
         lblicono = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         lblFondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -126,6 +127,14 @@ public class InicioSesion extends javax.swing.JFrame {
         lblicono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/inicio sesion1.png"))); // NOI18N
         jPanel2.add(lblicono, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, -20, -1, -1));
 
+        jButton1.setText("Nueva Contraseña");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 540, -1, -1));
+
         lblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/fondo-azul-207702.jpg"))); // NOI18N
         jPanel2.add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 2790, 1620));
 
@@ -154,7 +163,7 @@ public class InicioSesion extends javax.swing.JFrame {
 
     private void btnIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresarActionPerformed
        String usuario="ADMIN";
-       String contraseña="onepiece";
+       
        String Pass= new String(jPasswordField1.getPassword());
        if(txtUsuario.getText().equals(usuario)&& Pass.equals(contraseña)){
            Interfaz interfaz= Interfaz.getInstance();
@@ -197,7 +206,7 @@ public class InicioSesion extends javax.swing.JFrame {
     private void jPasswordField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyReleased
         if(evt.getKeyCode()==KeyEvent.VK_ENTER){
       String usuario="ADMIN";
-       String contraseña="onepiece";
+       
        String Pass= new String(jPasswordField1.getPassword());
        if(txtUsuario.getText().equals(usuario)&& Pass.equals(contraseña)){
            Interfaz interfaz= Interfaz.getInstance();
@@ -209,6 +218,22 @@ public class InicioSesion extends javax.swing.JFrame {
 }
     }//GEN-LAST:event_jPasswordField1KeyReleased
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String contra= JOptionPane.showInputDialog("Introduzca la antigüa contraseña");
+        cambiarContraseña(contra);
+    }//GEN-LAST:event_jButton1ActionPerformed
+public String cambiarContraseña(String contra){
+ 
+    if(contra.equals(contraseña)){
+        
+        String entradaUsuario= JOptionPane.showInputDialog("Introduzca la nueva contraseña :");
+        contraseña=entradaUsuario;
+        JOptionPane.showMessageDialog(null,"La nueva contraseña es: "+contraseña);
+    }else{
+        JOptionPane.showMessageDialog(null,"La contraseña que escribió no coincide con la antigüa");
+    }
+    return contraseña;
+}
     /**
      * @param args the command line arguments
      */
@@ -217,6 +242,7 @@ public class InicioSesion extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAyuda;
     private javax.swing.JButton btnIngresar;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JLabel lblContraseña;
