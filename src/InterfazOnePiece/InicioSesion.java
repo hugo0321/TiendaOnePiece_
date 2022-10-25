@@ -48,6 +48,7 @@ String contraseña="onepiece";
         txtUsuario = new javax.swing.JTextField();
         lblContraseña = new javax.swing.JLabel();
         lblUsuario = new javax.swing.JLabel();
+        lblRestablecerContraseña = new javax.swing.JLabel();
         lblicono = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         lblFondo = new javax.swing.JLabel();
@@ -58,6 +59,7 @@ String contraseña="onepiece";
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnAyuda.setBackground(new java.awt.Color(204, 204, 204));
+        btnAyuda.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnAyuda.setText("Ayuda");
         btnAyuda.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -76,6 +78,14 @@ String contraseña="onepiece";
 
         btnIngresar.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         btnIngresar.setText("Ingresar");
+        btnIngresar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnIngresarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnIngresarMouseExited(evt);
+            }
+        });
         btnIngresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIngresarActionPerformed(evt);
@@ -104,7 +114,8 @@ String contraseña="onepiece";
         });
         jPanel2.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 370, 150, -1));
 
-        txtUsuario.setText("Escriba su usuario");
+        txtUsuario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtUsuario.setText("Clic Aquí");
         txtUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txtUsuarioMouseClicked(evt);
@@ -125,6 +136,13 @@ String contraseña="onepiece";
         lblUsuario.setText("Usuario :");
         jPanel2.add(lblUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, -1, -1));
 
+        lblRestablecerContraseña.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblRestablecerContraseñaMouseClicked(evt);
+            }
+        });
+        jPanel2.add(lblRestablecerContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 130, 140));
+
         lblicono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/inicio sesion1.png"))); // NOI18N
         lblicono.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -133,6 +151,7 @@ String contraseña="onepiece";
         });
         jPanel2.add(lblicono, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, -20, -1, -1));
 
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setText("Nueva Contraseña");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -198,7 +217,7 @@ String contraseña="onepiece";
     }//GEN-LAST:event_btnIngresarKeyReleased
 
     private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
-        JOptionPane.showMessageDialog(this, "Usuario: ADMIN"+"\n"+"Contraseña: Nombre del anime sin espacio y minúsculas"+"\n"+"si por alguna razón cambió y olvidó la contraseña dirijase a la guía de usuario"+"\n"+"en la sección de ayuda del menú principal");
+        JOptionPane.showMessageDialog(this, "Usuario: ADMIN"+"\n"+"Contraseña: Nombre del anime sin espacio y minúsculas"+"\n"+"si por alguna razón cambió y olvidó la contraseña diríjase a la guía de usuario"+"\n"+"en la sección de ayuda del menú principal");
     }//GEN-LAST:event_btnAyudaActionPerformed
 
     private void btnAyudaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAyudaMouseExited
@@ -232,6 +251,22 @@ String contraseña="onepiece";
     
 //}
     private void lbliconoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbliconoMouseClicked
+        
+    }//GEN-LAST:event_lbliconoMouseClicked
+
+    private void btnIngresarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIngresarMouseEntered
+        
+        btnIngresar.setBackground(new java.awt.Color(0, 0, 0));
+         btnIngresar.setForeground(new java.awt.Color(255, 255, 255));
+    }//GEN-LAST:event_btnIngresarMouseEntered
+
+    private void btnIngresarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIngresarMouseExited
+      btnIngresar.setBackground(new java.awt.Color(255, 255, 255));
+         btnIngresar.setForeground(new java.awt.Color(0, 0, 0));
+    }//GEN-LAST:event_btnIngresarMouseExited
+
+    private void lblRestablecerContraseñaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRestablecerContraseñaMouseClicked
+        // TODO add your handling code here:
         String Usuario= JOptionPane.showInputDialog("Introduzca el usuario de la cuenta principal");
         if(Usuario.equals(usuario)){
             String contra= JOptionPane.showInputDialog("Introduzca la contraseña");
@@ -246,7 +281,7 @@ String contraseña="onepiece";
         }else{
             JOptionPane.showMessageDialog(null,"Usuario incorrecto"+"\n"+"Presione ESPACIO para continuar");
         }
-    }//GEN-LAST:event_lbliconoMouseClicked
+    }//GEN-LAST:event_lblRestablecerContraseñaMouseClicked
 public String cambiarContraseña(String contra){
  
     if(contra.equals(contraseña)){
@@ -272,6 +307,7 @@ public String cambiarContraseña(String contra){
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JLabel lblContraseña;
     private javax.swing.JLabel lblFondo;
+    private javax.swing.JLabel lblRestablecerContraseña;
     private javax.swing.JLabel lblUsuario;
     private javax.swing.JLabel lblicono;
     private javax.swing.JTextField txtUsuario;

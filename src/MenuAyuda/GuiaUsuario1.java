@@ -48,20 +48,24 @@ public static GuiaUsuario1 getInstance(){
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(0, 0, 0));
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea1.setRows(5);
-        jTextArea1.setText("En caso de haber cambiado y olvidado la contraseña, se puede cambiarla haciendo clic sobre la calavera\nde la pantalla de inicio de sesión y siguiendo los pasos con los datos correspondientes a la cuenta principal.\n- Los datos de la cuenta principal se pueden ver en el Menú principal>Mi perfil>Información del perfil.");
+        jTextArea1.setText("En caso de haber cambiado y olvidado la contraseña, se puede cambiarla haciendo clic \nsobre la calavera de la pantalla de inicio de sesión y siguiendo los pasos con los datos\ncorrespondientes a la cuenta principal.\n- Los datos de la cuenta principal se pueden ver en el Menú principal>Mi perfil>Información\n del perfil.");
         jScrollPane1.setViewportView(jTextArea1);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 600, 80));
 
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setText("Volver al menú");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 710, 120, 40));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 710, 140, 40));
 
         lblTitulo.setBackground(new java.awt.Color(255, 255, 204));
         lblTitulo.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
@@ -72,13 +76,14 @@ public static GuiaUsuario1 getInstance(){
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuAyuda/InicioSesion.png"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
 
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setText("Página anterior");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 722, 120, 30));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 722, 140, 30));
 
         lblFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuAyuda/fondoGuiaUsuario.jpg"))); // NOI18N
         jPanel1.add(lblFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 790, 720));

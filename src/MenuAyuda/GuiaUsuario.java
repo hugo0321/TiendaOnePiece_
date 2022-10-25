@@ -48,28 +48,33 @@ public static GuiaUsuario getInstance(){
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(0, 0, 0));
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea1.setRows(5);
-        jTextArea1.setText("Una vez logeados se nos rediccionará al menú principal donde encontraremos unos menús desplegables\nen la parte superior, iniciando con el menú en el cuál podemos encontrar las funciones como:\n- Realizar venta: al darle clic izquierdo nos rediccionará a una interfaz lista para hacer una venta.\n- Registrar cliente: al darle clic izquierdo nos rediccionará a una interfaz donde deberemos llenar los datos\ndel cliente y registrarlo.\n-Lista de clientes: al darle clic izquierdo nos rediccionará a una interfaz donde podremos ver una tabla con\nlos clientes registrados hasta el momento\n-Salir");
+        jTextArea1.setText("Una vez logeados se nos rediccionará al menú principal donde encontraremos unos menús desplegables\nen la parte superior, iniciando con el menú en el cuál podemos encontrar las funciones como:\n- Realizar venta: al darle clic izquierdo nos rediccionará a una interfaz lista para hacer una venta.\n- Registrar cliente: al darle clic izquierdo nos rediccionará a una interfaz donde deberemos llenar los \n  datos del cliente y registrarlo.\n-Lista de clientes: al darle clic izquierdo nos rediccionará a una interfaz donde podremos ver una\n tabla con los clientes registrados hasta el momento.\n-Salir");
         jScrollPane1.setViewportView(jTextArea1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, 580, 120));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 660, 120));
 
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setText("Siguiente página");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 710, 140, 40));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 710, 150, 40));
 
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setText("Volver al menú");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 710, 120, 40));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 710, 140, 40));
 
         lblTitulo.setBackground(new java.awt.Color(255, 255, 204));
         lblTitulo.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N

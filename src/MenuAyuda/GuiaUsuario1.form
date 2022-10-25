@@ -62,15 +62,27 @@
             <Component class="javax.swing.JTextArea" name="jTextArea1">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
                 <Property name="columns" type="int" value="20"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="14" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
                 <Property name="rows" type="int" value="5"/>
-                <Property name="text" type="java.lang.String" value="En caso de haber cambiado y olvidado la contrase&#xf1;a, se puede cambiarla haciendo clic sobre la calavera&#xa;de la pantalla de inicio de sesi&#xf3;n y siguiendo los pasos con los datos correspondientes a la cuenta principal.&#xa;- Los datos de la cuenta principal se pueden ver en el Men&#xfa; principal&gt;Mi perfil&gt;Informaci&#xf3;n del perfil."/>
+                <Property name="text" type="java.lang.String" value="En caso de haber cambiado y olvidado la contrase&#xf1;a, se puede cambiarla haciendo clic &#xa;sobre la calavera de la pantalla de inicio de sesi&#xf3;n y siguiendo los pasos con los datos&#xa;correspondientes a la cuenta principal.&#xa;- Los datos de la cuenta principal se pueden ver en el Men&#xfa; principal&gt;Mi perfil&gt;Informaci&#xf3;n&#xa; del perfil."/>
               </Properties>
             </Component>
           </SubComponents>
         </Container>
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Volver al men&#xfa;"/>
           </Properties>
           <Events>
@@ -78,7 +90,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="690" y="710" width="120" height="40"/>
+              <AbsoluteConstraints x="670" y="710" width="140" height="40"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -115,6 +127,9 @@
         </Component>
         <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="14" style="1"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="P&#xe1;gina anterior"/>
           </Properties>
           <Events>
@@ -122,7 +137,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="10" y="722" width="120" height="30"/>
+              <AbsoluteConstraints x="10" y="722" width="140" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
