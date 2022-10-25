@@ -4,6 +4,8 @@
  */
 package InterfazOnePiece;
 
+import MenuAyuda.GuiaUsuario;
+import MenuAyuda.GuiaUsuario1;
 import MenuAyuda.TerminosCondiciones;
 import RegistrarCliente.MirarClientes;
 import RegistrarCliente.RegistrarCliente;
@@ -68,20 +70,22 @@ public class Interfaz extends javax.swing.JFrame {
         jMenuItem14 = new javax.swing.JMenuItem();
         jMenuItem13 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
+        jMenu5 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuItem18 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
         jMenuItem12 = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Menú One Piece v1.1");
+        setTitle("Menú Principal One Piece v1.1");
 
         jPanel1.setBackground(new java.awt.Color(199, 236, 238));
         jPanel1.setLayout(new java.awt.GridLayout(2, 1, 2, 0));
 
         jTextField1.setEditable(false);
         jTextField1.setBackground(new java.awt.Color(199, 236, 238));
-        jTextField1.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 18)); // NOI18N
+        jTextField1.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("BIENVENIDOS A LA TIENDA");
         jTextField1.setToolTipText("");
@@ -89,7 +93,8 @@ public class Interfaz extends javax.swing.JFrame {
 
         jTextField2.setEditable(false);
         jTextField2.setBackground(new java.awt.Color(199, 236, 238));
-        jTextField2.setFont(new java.awt.Font("MS Reference Sans Serif", 1, 14)); // NOI18N
+        jTextField2.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField2.setText("Encuentra lo necesario para el trabajo en el menú superior");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,8 +113,10 @@ public class Interfaz extends javax.swing.JFrame {
         getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
 
         jMenuBar1.setBackground(new java.awt.Color(204, 255, 255));
+        jMenuBar1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
 
         jMenu1.setText("Menú");
+        jMenu1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jMenu1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenu1ActionPerformed(evt);
@@ -118,6 +125,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/shopping-bag.png"))); // NOI18N
         jMenu3.setText("Productos disponibles");
+        jMenu3.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
 
         jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/blusa.png"))); // NOI18N
         jMenuItem3.setText("Blusas");
@@ -145,6 +153,7 @@ public class Interfaz extends javax.swing.JFrame {
 
         jMenu1.add(jMenu3);
 
+        jMenuItem15.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jMenuItem15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/accesorio.png"))); // NOI18N
         jMenuItem15.setText("Realizar venta");
         jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
@@ -154,6 +163,7 @@ public class Interfaz extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem15);
 
+        jMenuItem1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/cart.png"))); // NOI18N
         jMenuItem1.setText("Registrar cliente");
         jMenuItem1.setActionCommand("Realizar compra");
@@ -164,6 +174,7 @@ public class Interfaz extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem1);
 
+        jMenuItem16.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jMenuItem16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/usuario.png"))); // NOI18N
         jMenuItem16.setText("Lista de Clientes");
         jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
@@ -174,6 +185,8 @@ public class Interfaz extends javax.swing.JFrame {
         jMenu1.add(jMenuItem16);
 
         jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem2.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jMenuItem2.setForeground(new java.awt.Color(0, 51, 153));
         jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/2931188_door_enter_exit_leave_out_icon.png"))); // NOI18N
         jMenuItem2.setText("Salir");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -186,7 +199,9 @@ public class Interfaz extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Mi Perfil");
+        jMenu2.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
 
+        jMenuItem14.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jMenuItem14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/seleccione.png"))); // NOI18N
         jMenuItem14.setText("Información del Perfil");
         jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
@@ -197,6 +212,8 @@ public class Interfaz extends javax.swing.JFrame {
         jMenu2.add(jMenuItem14);
 
         jMenuItem13.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.SHIFT_DOWN_MASK | java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem13.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jMenuItem13.setForeground(new java.awt.Color(0, 51, 153));
         jMenuItem13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/boton.png"))); // NOI18N
         jMenuItem13.setText("Cerrar Sesión");
         jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
@@ -209,11 +226,35 @@ public class Interfaz extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         jMenu4.setText("Ayuda");
+        jMenu4.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
 
-        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/libro-de-instrucciones.png"))); // NOI18N
-        jMenuItem9.setText("Guía de usuario");
-        jMenu4.add(jMenuItem9);
+        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/libro-de-instrucciones.png"))); // NOI18N
+        jMenu5.setText("Guía de usuario");
+        jMenu5.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
 
+        jMenuItem9.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jMenuItem9.setForeground(new java.awt.Color(0, 51, 153));
+        jMenuItem9.setText("Menú Principal");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem9);
+
+        jMenuItem18.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jMenuItem18.setForeground(new java.awt.Color(153, 0, 0));
+        jMenuItem18.setText("Olvidé la contraseña");
+        jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem18ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem18);
+
+        jMenu4.add(jMenu5);
+
+        jMenuItem11.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/buscar.png"))); // NOI18N
         jMenuItem11.setText("Términos y Condiciones");
         jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
@@ -223,10 +264,12 @@ public class Interfaz extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem11);
 
+        jMenuItem12.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/apreton-de-manos.png"))); // NOI18N
         jMenuItem12.setText("Quejas y Devoluciones");
         jMenu4.add(jMenuItem12);
 
+        jMenuItem10.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/auriculares.png"))); // NOI18N
         jMenuItem10.setText("Contactos");
         jMenu4.add(jMenuItem10);
@@ -275,7 +318,7 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
-        JOptionPane.showMessageDialog(this, "Los datos de la cuenta son :"+"\n"+"Usuario: ADMIN"+"\n"+"Contraseña: onepiece");
+        JOptionPane.showMessageDialog(this, "Los datos de la cuenta principal son :"+"\n"+"Usuario: ADMIN"+"\n"+"Contraseña: onepiece");
     }//GEN-LAST:event_jMenuItem14ActionPerformed
 
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
@@ -291,6 +334,18 @@ public class Interfaz extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jMenuItem11ActionPerformed
 
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+       GuiaUsuario guiausuario= GuiaUsuario.getInstance();
+        guiausuario.setVisible(true);
+        this.dispose(); 
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
+      GuiaUsuario1 guiausuario1= GuiaUsuario1.getInstance();
+        guiausuario1.setVisible(true);
+        this.dispose(); 
+    }//GEN-LAST:event_jMenuItem18ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -304,6 +359,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
@@ -313,6 +369,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem16;
+    private javax.swing.JMenuItem jMenuItem18;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
