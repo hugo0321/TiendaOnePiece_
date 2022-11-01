@@ -7,6 +7,8 @@ package RegistrarCliente;
 import ControllerRegistroCLiente.ClientesController;
 import DAOClientes.DAOclientes;
 import InterfazOnePiece.Interfaz;
+import javax.swing.ButtonGroup;
+import javax.swing.ButtonModel;
 import javax.swing.JOptionPane;
 
 /**
@@ -43,26 +45,28 @@ public class RegistrarCliente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        tipodocumento = new javax.swing.ButtonGroup();
+        NumeroCompras = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         txtNombCliente = new javax.swing.JTextField();
         jPanelApellido2 = new javax.swing.JPanel();
-        txtApellido = new javax.swing.JTextField();
+        txtApellido2 = new javax.swing.JTextField();
         JpanelTipoDocumento = new javax.swing.JPanel();
-        cH_CC = new javax.swing.JCheckBox();
-        cH_Otro = new javax.swing.JCheckBox();
+        rbtnCC = new javax.swing.JRadioButton();
+        rbtnOtro = new javax.swing.JRadioButton();
         txtTipoDocumento = new javax.swing.JTextField();
         JpanelNumeroDocumento = new javax.swing.JPanel();
         txtdocumento = new javax.swing.JTextField();
         jPanelNombre2 = new javax.swing.JPanel();
         txtNombCliente2 = new javax.swing.JTextField();
         jPanelApellido = new javax.swing.JPanel();
-        txtApellido2 = new javax.swing.JTextField();
+        txtApellido1 = new javax.swing.JTextField();
         jPanelPromedioCompras = new javax.swing.JPanel();
-        cH_uno = new javax.swing.JCheckBox();
-        cH_11 = new javax.swing.JCheckBox();
-        cH_21 = new javax.swing.JCheckBox();
-        cH_31 = new javax.swing.JCheckBox();
+        rbtnUno = new javax.swing.JRadioButton();
+        rbtn11 = new javax.swing.JRadioButton();
+        rbtn21 = new javax.swing.JRadioButton();
+        rbtn31 = new javax.swing.JRadioButton();
         btnRegresar = new javax.swing.JButton();
         btnRegistrar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
@@ -83,6 +87,9 @@ public class RegistrarCliente extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txtNombClienteMouseClicked(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtNombClienteMouseExited(evt);
+            }
         });
         txtNombCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,40 +104,45 @@ public class RegistrarCliente extends javax.swing.JFrame {
         jPanel1.add(txtNombCliente);
 
         jPanelApellido2.setBorder(javax.swing.BorderFactory.createTitledBorder("Apellido 2:"));
+        jPanelApellido2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jPanelApellido2MouseExited(evt);
+            }
+        });
         jPanelApellido2.setLayout(new java.awt.GridLayout(1, 0));
 
-        txtApellido.setText("ESCRIBA AQUÍ");
-        txtApellido.setBorder(null);
-        txtApellido.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtApellido2.setText("ESCRIBA AQUÍ");
+        txtApellido2.setBorder(null);
+        txtApellido2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txtApellidoMouseClicked(evt);
+                txtApellido2MouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtApellido2MouseExited(evt);
             }
         });
-        txtApellido.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtApellido2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtApellidoKeyTyped(evt);
+                txtApellido2KeyTyped(evt);
             }
         });
-        jPanelApellido2.add(txtApellido);
+        jPanelApellido2.add(txtApellido2);
 
         JpanelTipoDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder("Tipo Documento de Identidad"));
         JpanelTipoDocumento.setLayout(new java.awt.GridLayout(1, 0));
 
-        cH_CC.setText("CC");
-        JpanelTipoDocumento.add(cH_CC);
+        tipodocumento.add(rbtnCC);
+        rbtnCC.setText("CC");
+        JpanelTipoDocumento.add(rbtnCC);
 
-        cH_Otro.setText("Otro");
-        cH_Otro.addChangeListener(new javax.swing.event.ChangeListener() {
+        tipodocumento.add(rbtnOtro);
+        rbtnOtro.setText("Otro");
+        rbtnOtro.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                cH_OtroStateChanged(evt);
+                rbtnOtroStateChanged(evt);
             }
         });
-        cH_Otro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cH_OtroActionPerformed(evt);
-            }
-        });
-        JpanelTipoDocumento.add(cH_Otro);
+        JpanelTipoDocumento.add(rbtnOtro);
 
         txtTipoDocumento.setText("CUÁL");
         txtTipoDocumento.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -158,6 +170,9 @@ public class RegistrarCliente extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txtdocumentoMouseClicked(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtdocumentoMouseExited(evt);
+            }
         });
         txtdocumento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -174,11 +189,14 @@ public class RegistrarCliente extends javax.swing.JFrame {
         jPanelNombre2.setBorder(javax.swing.BorderFactory.createTitledBorder("Nombre 2 :"));
         jPanelNombre2.setLayout(new java.awt.GridLayout(1, 0));
 
-        txtNombCliente2.setText("OPCIONAL");
+        txtNombCliente2.setText("ESCRIBA AQUÍ");
         txtNombCliente2.setBorder(null);
         txtNombCliente2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txtNombCliente2MouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtNombCliente2MouseExited(evt);
             }
         });
         txtNombCliente2.addActionListener(new java.awt.event.ActionListener() {
@@ -196,34 +214,46 @@ public class RegistrarCliente extends javax.swing.JFrame {
         jPanelApellido.setBorder(javax.swing.BorderFactory.createTitledBorder("Apellido"));
         jPanelApellido.setLayout(new java.awt.GridLayout(1, 0));
 
-        txtApellido2.setText("ESCRIBA AQUÍ");
-        txtApellido2.setBorder(null);
-        txtApellido2.addMouseListener(new java.awt.event.MouseAdapter() {
+        txtApellido1.setText("ESCRIBA AQUÍ");
+        txtApellido1.setBorder(null);
+        txtApellido1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txtApellido2MouseClicked(evt);
+                txtApellido1MouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtApellido1MouseExited(evt);
             }
         });
-        txtApellido2.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtApellido1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtApellido2KeyTyped(evt);
+                txtApellido1KeyTyped(evt);
             }
         });
-        jPanelApellido.add(txtApellido2);
+        jPanelApellido.add(txtApellido1);
 
         jPanelPromedioCompras.setBorder(javax.swing.BorderFactory.createTitledBorder("Número Compras Mensuales"));
 
-        cH_uno.setText("1-10");
-        cH_uno.addActionListener(new java.awt.event.ActionListener() {
+        NumeroCompras.add(rbtnUno);
+        rbtnUno.setText("1 a 10 ");
+        rbtnUno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cH_unoActionPerformed(evt);
+                rbtnUnoActionPerformed(evt);
             }
         });
 
-        cH_11.setText("11-20");
+        NumeroCompras.add(rbtn11);
+        rbtn11.setText("11 a 20");
+        rbtn11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbtn11ActionPerformed(evt);
+            }
+        });
 
-        cH_21.setText("21-30");
+        NumeroCompras.add(rbtn21);
+        rbtn21.setText("21 a 30");
 
-        cH_31.setText("31 o más");
+        NumeroCompras.add(rbtn31);
+        rbtn31.setText("31 o más");
 
         javax.swing.GroupLayout jPanelPromedioComprasLayout = new javax.swing.GroupLayout(jPanelPromedioCompras);
         jPanelPromedioCompras.setLayout(jPanelPromedioComprasLayout);
@@ -232,24 +262,24 @@ public class RegistrarCliente extends javax.swing.JFrame {
             .addGroup(jPanelPromedioComprasLayout.createSequentialGroup()
                 .addGap(47, 47, 47)
                 .addGroup(jPanelPromedioComprasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cH_31, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cH_21, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cH_11, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cH_uno, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(71, Short.MAX_VALUE))
+                    .addComponent(rbtn31, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rbtn21, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rbtn11, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rbtnUno, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         jPanelPromedioComprasLayout.setVerticalGroup(
             jPanelPromedioComprasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelPromedioComprasLayout.createSequentialGroup()
-                .addGap(8, 8, 8)
-                .addComponent(cH_uno)
+                .addContainerGap()
+                .addComponent(rbtnUno)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cH_11)
+                .addComponent(rbtn11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cH_21)
+                .addComponent(rbtn21)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cH_31)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(rbtn31)
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
         btnRegresar.setText("Regresar al menú");
@@ -354,10 +384,6 @@ public class RegistrarCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombClienteActionPerformed
 
-    private void cH_OtroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cH_OtroActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cH_OtroActionPerformed
-
     private void txtdocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdocumentoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtdocumentoActionPerformed
@@ -366,12 +392,9 @@ public class RegistrarCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombCliente2ActionPerformed
 
-    private void cH_unoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cH_unoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cH_unoActionPerformed
-
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
         // TODO add your handling code here:
+        
          Interfaz interfaz = Interfaz.getInstance();
         interfaz.setVisible(true);
         this.dispose();
@@ -379,31 +402,69 @@ public class RegistrarCliente extends javax.swing.JFrame {
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
         // TODO add your handling code here:
+        //jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombre :", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
          DAOclientes clientCont = ClientesController.getInstance();
+        if(txtNombCliente.getText().equals("")||txtNombCliente.getText().equals("OBLIGATORIO")||txtNombCliente.getText().equals("ESCRIBA AQUÍ")||
+                txtApellido2.getText().equals("")||txtApellido2.getText().equals("OBLIGATORIO")||txtApellido2.getText().equals("ESCRIBA AQUÍ")||
+                        txtApellido1.getText().equals("")||txtApellido1.getText().equals("OBLIGATORIO")||txtApellido1.getText().equals("ESCRIBA AQUÍ")||
+                                txtdocumento.getText().equals("")||txtdocumento.getText().equals("OBLIGATORIO")||txtdocumento.getText().equals("Sólo números")||(rbtnCC.isSelected()==false&&rbtnOtro.isSelected()==false))
+                                        {
+           jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombre : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
+            txtNombCliente.setForeground(new java.awt.Color(255, 0, 51));
+            txtNombCliente.setText("OBLIGATORIO");
+            
+            txtNombCliente2.setText("");
+            
+            JpanelNumeroDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Número Documento : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
+            txtdocumento.setForeground(new java.awt.Color(255, 0, 51));
+            txtdocumento.setText("OBLIGATORIO");
+            
+            jPanelApellido.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Apellido : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
+            txtApellido2.setForeground(new java.awt.Color(255, 0, 51));
+            txtApellido2.setText("OBLIGATORIO");
+            
+            jPanelApellido2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Segundo Apellido : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
+            txtApellido1.setForeground(new java.awt.Color(255, 0, 51));
+            txtApellido1.setText("OBLIGATORIO");
+           
+             JpanelTipoDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo Documento de Identidad : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));    
+                
+           
+             
+           JOptionPane.showMessageDialog(null,"Rellene las casillas faltantes");  
+        }else{
+         
         String nombCliente= txtNombCliente.getText();
         String nombCliente2= txtNombCliente2.getText();
-        String ApeCliente=txtApellido.getText();
-        String ApeCliente2=txtApellido2.getText();
-        String TI="";
-        if (cH_CC.isSelected()){
+        String ApeCliente=txtApellido2.getText();
+        String ApeCliente2=txtApellido1.getText();
+        
+
+
+         String TI="";
+        if (rbtnCC.isSelected()){
+          
             TI=" Cédula de Ciudadanía";
         }else{
-            if(cH_Otro.isSelected()){
+            if(rbtnOtro.isSelected()){
+               
             TI=txtTipoDocumento.getText();
         }
+                
+            
         }
         String numident=txtdocumento.getText();
         String NCM="";
-        if(cH_uno.isSelected()){
+        if(rbtnUno.isSelected()){
             NCM="1 a 10 compras";
         }else{
-            if(cH_11.isSelected()){
+            if(rbtn11.isSelected()){
                 NCM="11 a 20 compras";
             }else{
-                if(cH_21.isSelected()){
+                if(rbtn21.isSelected()){
                     NCM="21 a 30 compras";
                 }else{
-                    if(cH_31.isSelected()){
+                    if(rbtn31.isSelected()){
                         NCM="31 o más compras";
                     }
                 }
@@ -411,9 +472,11 @@ public class RegistrarCliente extends javax.swing.JFrame {
         }
             
       clientCont.AgregarCliente(ApeCliente2, ApeCliente,nombCliente,nombCliente2 , TI,numident, NCM);
+      NumeroCompras.clearSelection();
+      tipodocumento.clearSelection();
       JOptionPane.showMessageDialog(null,"Se ha registrado el cliente");
       NuevoRegistro();
-        
+        }   
          
          
                 
@@ -421,16 +484,18 @@ public class RegistrarCliente extends javax.swing.JFrame {
  private void NuevoRegistro(){
      txtNombCliente.setText("");
         txtNombCliente2.setText("");
-        txtApellido.setText("");
         txtApellido2.setText("");
+        txtApellido1.setText("");
         txtdocumento.setText("");
         txtTipoDocumento.setText("CUÁL");
-        cH_CC.setSelected(false);
-        cH_Otro.setSelected(false);
-        cH_uno.setSelected(false);
-        cH_11.setSelected(false);
-        cH_21.setSelected(false);
-        cH_31.setSelected(false);
+        rbtnCC.setSelected(false);
+        rbtnOtro.setSelected(false);
+        rbtnUno.setSelected(false);
+        rbtn11.setSelected(false);
+        rbtn21.setSelected(false);
+        rbtn31.setSelected(false);
+        //tipodocumento.setSelected((ButtonModel) rbtnCC, true);
+        NumeroCompras.clearSelection();
         
  }
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
@@ -449,15 +514,15 @@ public class RegistrarCliente extends javax.swing.JFrame {
         txtNombCliente2.setText("");
     }//GEN-LAST:event_txtNombCliente2MouseClicked
 
+    private void txtApellido1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtApellido1MouseClicked
+        // TODO add your handling code here:
+        txtApellido1.setText("");
+    }//GEN-LAST:event_txtApellido1MouseClicked
+
     private void txtApellido2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtApellido2MouseClicked
         // TODO add your handling code here:
         txtApellido2.setText("");
     }//GEN-LAST:event_txtApellido2MouseClicked
-
-    private void txtApellidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtApellidoMouseClicked
-        // TODO add your handling code here:
-        txtApellido.setText("");
-    }//GEN-LAST:event_txtApellidoMouseClicked
 
     private void txtdocumentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtdocumentoMouseClicked
         // TODO add your handling code here:
@@ -486,14 +551,6 @@ public class RegistrarCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTipoDocumentoActionPerformed
 
-    private void cH_OtroStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_cH_OtroStateChanged
-              if(cH_Otro.isSelected()==false){
-    txtTipoDocumento.setEnabled(false);
-} else{
-    txtTipoDocumento.setEnabled(true);
-}  
-    }//GEN-LAST:event_cH_OtroStateChanged
-
     private void txtTipoDocumentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtTipoDocumentoMouseClicked
          txtTipoDocumento.setText("");
     }//GEN-LAST:event_txtTipoDocumentoMouseClicked
@@ -510,7 +567,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_txtNombCliente2KeyTyped
 
-    private void txtApellido2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellido2KeyTyped
+    private void txtApellido1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellido1KeyTyped
         // TODO add your handling code here:
               int key = evt.getKeyChar();
 
@@ -520,9 +577,21 @@ public class RegistrarCliente extends javax.swing.JFrame {
     {
         evt.consume();
     }
-    }//GEN-LAST:event_txtApellido2KeyTyped
+    }//GEN-LAST:event_txtApellido1KeyTyped
+public void camposObligatorios(){
+    if((txtNombCliente.getText().equals(""))|| (txtNombCliente.getText().equals("OBLIGATORIO"))){
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombre : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
+     txtNombCliente.setForeground(new java.awt.Color(255, 0, 51));
+     txtNombCliente.setText("OBLIGATORIO");
+    }else{
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombre : ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0)));
+     txtNombCliente.setForeground(new java.awt.Color(0, 0, 0));
+     txtNombCliente.getText();
+    }
 
-    private void txtApellidoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoKeyTyped
+    
+}
+    private void txtApellido2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellido2KeyTyped
               int key = evt.getKeyChar();
 
     boolean mayusculas = key >= 65 && key <= 90;
@@ -531,7 +600,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
     {
         evt.consume();
     }
-    }//GEN-LAST:event_txtApellidoKeyTyped
+    }//GEN-LAST:event_txtApellido2KeyTyped
 
     private void txtTipoDocumentoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTipoDocumentoKeyTyped
               int key = evt.getKeyChar();
@@ -544,6 +613,81 @@ public class RegistrarCliente extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_txtTipoDocumentoKeyTyped
 
+    private void txtNombClienteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombClienteMouseExited
+     camposObligatorios();
+           
+       
+    }//GEN-LAST:event_txtNombClienteMouseExited
+
+    private void txtNombCliente2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombCliente2MouseExited
+    if((txtNombCliente2.getText().equals(""))|| (txtNombCliente2.getText().equals("OPCIONAL"))){
+        //jPanelNombre2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Segundo  : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
+  
+     txtNombCliente2.setText("");
+    }else{
+       // jPanelNombre2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombre : ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0)));
+     //txtNombCliente2.setForeground(new java.awt.Color(0, 0, 0));
+     txtNombCliente2.getText();
+    }
+    }//GEN-LAST:event_txtNombCliente2MouseExited
+
+    private void txtApellido1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtApellido1MouseExited
+      if((txtApellido1.getText().equals(""))|| (txtApellido1.getText().equals("OBLIGATORIO"))){
+        jPanelApellido.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Apellido : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
+     txtApellido1.setForeground(new java.awt.Color(255, 0, 51));
+     txtApellido1.setText("OBLIGATORIO");
+    }else{
+        jPanelApellido.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Apellido : ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0)));
+     txtApellido1.setForeground(new java.awt.Color(0, 0, 0));
+     txtApellido1.getText();
+    }
+    }//GEN-LAST:event_txtApellido1MouseExited
+
+    private void jPanelApellido2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelApellido2MouseExited
+
+    }//GEN-LAST:event_jPanelApellido2MouseExited
+
+    private void txtApellido2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtApellido2MouseExited
+        if((txtApellido2.getText().equals(""))|| (txtApellido2.getText().equals("OBLIGATORIO"))){
+        jPanelApellido2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Segundo Apellido : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
+     txtApellido2.setForeground(new java.awt.Color(255, 0, 51));
+     txtApellido2.setText("OBLIGATORIO");
+    }else{
+        jPanelApellido2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Segundo Apellido : ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0)));
+     txtApellido2.setForeground(new java.awt.Color(0, 0, 0));
+     txtApellido2.getText();
+    }
+    }//GEN-LAST:event_txtApellido2MouseExited
+
+    private void txtdocumentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtdocumentoMouseExited
+        // TODO add your handling code here:
+        if((txtdocumento.getText().equals(""))|| (txtdocumento.getText().equals("OBLIGATORIO"))){
+        JpanelNumeroDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Número Documento : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
+     txtdocumento.setForeground(new java.awt.Color(255, 0, 51));
+     txtdocumento.setText("OBLIGATORIO");
+    }else{
+        JpanelNumeroDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Número Documento : ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0)));
+     txtdocumento.setForeground(new java.awt.Color(0, 0, 0));
+     txtdocumento.getText();
+    }
+    }//GEN-LAST:event_txtdocumentoMouseExited
+
+    private void rbtnOtroStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_rbtnOtroStateChanged
+    if(rbtnOtro.isSelected()==false){
+            txtTipoDocumento.setEnabled(false);
+        } else{
+            txtTipoDocumento.setEnabled(true);
+        }
+    }//GEN-LAST:event_rbtnOtroStateChanged
+
+    private void rbtn11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtn11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbtn11ActionPerformed
+
+    private void rbtnUnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbtnUnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbtnUnoActionPerformed
+
     /**
      *
      */
@@ -553,15 +697,10 @@ public class RegistrarCliente extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel JpanelNumeroDocumento;
     private javax.swing.JPanel JpanelTipoDocumento;
+    private javax.swing.ButtonGroup NumeroCompras;
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnRegistrar;
     private javax.swing.JButton btnRegresar;
-    private javax.swing.JCheckBox cH_11;
-    private javax.swing.JCheckBox cH_21;
-    private javax.swing.JCheckBox cH_31;
-    private javax.swing.JCheckBox cH_CC;
-    private javax.swing.JCheckBox cH_Otro;
-    private javax.swing.JCheckBox cH_uno;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
@@ -569,7 +708,14 @@ public class RegistrarCliente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelApellido2;
     private javax.swing.JPanel jPanelNombre2;
     private javax.swing.JPanel jPanelPromedioCompras;
-    private javax.swing.JTextField txtApellido;
+    private javax.swing.JRadioButton rbtn11;
+    private javax.swing.JRadioButton rbtn21;
+    private javax.swing.JRadioButton rbtn31;
+    private javax.swing.JRadioButton rbtnCC;
+    private javax.swing.JRadioButton rbtnOtro;
+    private javax.swing.JRadioButton rbtnUno;
+    private javax.swing.ButtonGroup tipodocumento;
+    private javax.swing.JTextField txtApellido1;
     private javax.swing.JTextField txtApellido2;
     private javax.swing.JTextField txtNombCliente;
     private javax.swing.JTextField txtNombCliente2;
