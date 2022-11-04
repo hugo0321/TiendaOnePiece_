@@ -62,11 +62,13 @@ public class MirarClientes extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lista One Piece v1.1");
 
+        jLabel1.setBackground(new java.awt.Color(223, 230, 233));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Lista Clientes One Piece");
         getContentPane().add(jLabel1, java.awt.BorderLayout.PAGE_START);
 
+        jTable1.setBackground(new java.awt.Color(223, 230, 233));
         jTable1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -85,6 +87,7 @@ public class MirarClientes extends javax.swing.JFrame {
 
         jPanel1.setLayout(new java.awt.GridLayout(1, 0));
 
+        jButton1.setBackground(new java.awt.Color(223, 230, 233));
         jButton1.setText("Agregar Nuevo Cliente");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,6 +96,7 @@ public class MirarClientes extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1);
 
+        jButton2.setBackground(new java.awt.Color(223, 230, 233));
         jButton2.setText("Actualizar Lista Clientes");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,6 +105,7 @@ public class MirarClientes extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2);
 
+        jButton3.setBackground(new java.awt.Color(223, 230, 233));
         jButton3.setText("Regresar al Menú");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
