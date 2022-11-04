@@ -47,62 +47,43 @@ public class RegistrarCliente extends javax.swing.JFrame {
 
         tipodocumento = new javax.swing.ButtonGroup();
         NumeroCompras = new javax.swing.ButtonGroup();
+        jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        txtNombCliente = new javax.swing.JTextField();
         jPanelApellido2 = new javax.swing.JPanel();
         txtApellido2 = new javax.swing.JTextField();
-        JpanelTipoDocumento = new javax.swing.JPanel();
-        rbtnCC = new javax.swing.JRadioButton();
-        rbtnOtro = new javax.swing.JRadioButton();
-        txtTipoDocumento = new javax.swing.JTextField();
+        jPanelApellido = new javax.swing.JPanel();
+        txtApellido1 = new javax.swing.JTextField();
         JpanelNumeroDocumento = new javax.swing.JPanel();
         txtdocumento = new javax.swing.JTextField();
         jPanelNombre2 = new javax.swing.JPanel();
         txtNombCliente2 = new javax.swing.JTextField();
-        jPanelApellido = new javax.swing.JPanel();
-        txtApellido1 = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+        txtNombCliente = new javax.swing.JTextField();
+        JpanelTipoDocumento = new javax.swing.JPanel();
+        rbtnCC = new javax.swing.JRadioButton();
+        rbtnOtro = new javax.swing.JRadioButton();
+        txtTipoDocumento = new javax.swing.JTextField();
         jPanelPromedioCompras = new javax.swing.JPanel();
         rbtnUno = new javax.swing.JRadioButton();
         rbtn11 = new javax.swing.JRadioButton();
         rbtn21 = new javax.swing.JRadioButton();
         rbtn31 = new javax.swing.JRadioButton();
-        btnRegresar = new javax.swing.JButton();
         btnRegistrar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
+        btnRegresar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Registro One Piece v1.1");
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jPanel2.setBackground(new java.awt.Color(23, 192, 235));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Rockwell Extra Bold", 1, 36)); // NOI18N
         jLabel1.setText("Registro de Cliente");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, -1, -1));
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Nombre :"));
-        jPanel1.setLayout(new java.awt.GridLayout(1, 0));
-
-        txtNombCliente.setText("ESCRIBA AQUÍ");
-        txtNombCliente.setBorder(null);
-        txtNombCliente.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txtNombClienteMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                txtNombClienteMouseExited(evt);
-            }
-        });
-        txtNombCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombClienteActionPerformed(evt);
-            }
-        });
-        txtNombCliente.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtNombClienteKeyTyped(evt);
-            }
-        });
-        jPanel1.add(txtNombCliente);
-
+        jPanelApellido2.setBackground(new java.awt.Color(223, 230, 233));
         jPanelApellido2.setBorder(javax.swing.BorderFactory.createTitledBorder("Apellido 2:"));
         jPanelApellido2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
@@ -128,6 +109,115 @@ public class RegistrarCliente extends javax.swing.JFrame {
         });
         jPanelApellido2.add(txtApellido2);
 
+        jPanel2.add(jPanelApellido2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 100, 102, 48));
+
+        jPanelApellido.setBackground(new java.awt.Color(223, 230, 233));
+        jPanelApellido.setBorder(javax.swing.BorderFactory.createTitledBorder("Apellido"));
+        jPanelApellido.setLayout(new java.awt.GridLayout(1, 0));
+
+        txtApellido1.setText("ESCRIBA AQUÍ");
+        txtApellido1.setBorder(null);
+        txtApellido1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtApellido1MouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtApellido1MouseExited(evt);
+            }
+        });
+        txtApellido1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtApellido1KeyTyped(evt);
+            }
+        });
+        jPanelApellido.add(txtApellido1);
+
+        jPanel2.add(jPanelApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, 102, 48));
+
+        JpanelNumeroDocumento.setBackground(new java.awt.Color(223, 230, 233));
+        JpanelNumeroDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder("Número Documento"));
+        JpanelNumeroDocumento.setLayout(new java.awt.GridLayout(1, 0));
+
+        txtdocumento.setText("Solo números");
+        txtdocumento.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtdocumentoMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtdocumentoMouseExited(evt);
+            }
+        });
+        txtdocumento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtdocumentoActionPerformed(evt);
+            }
+        });
+        txtdocumento.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtdocumentoKeyTyped(evt);
+            }
+        });
+        JpanelNumeroDocumento.add(txtdocumento);
+
+        jPanel2.add(JpanelNumeroDocumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 150, 50));
+
+        jPanelNombre2.setBackground(new java.awt.Color(223, 230, 233));
+        jPanelNombre2.setBorder(javax.swing.BorderFactory.createTitledBorder("Nombre 2 :"));
+        jPanelNombre2.setLayout(new java.awt.GridLayout(1, 0));
+
+        txtNombCliente2.setText("ESCRIBA AQUÍ");
+        txtNombCliente2.setBorder(null);
+        txtNombCliente2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtNombCliente2MouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtNombCliente2MouseExited(evt);
+            }
+        });
+        txtNombCliente2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombCliente2ActionPerformed(evt);
+            }
+        });
+        txtNombCliente2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombCliente2KeyTyped(evt);
+            }
+        });
+        jPanelNombre2.add(txtNombCliente2);
+
+        jPanel2.add(jPanelNombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, 102, 48));
+
+        jPanel1.setBackground(new java.awt.Color(223, 230, 233));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Nombre :"));
+        jPanel1.setLayout(new java.awt.GridLayout(1, 0));
+
+        txtNombCliente.setText("ESCRIBA AQUÍ");
+        txtNombCliente.setBorder(null);
+        txtNombCliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtNombClienteMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtNombClienteMouseExited(evt);
+            }
+        });
+        txtNombCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombClienteActionPerformed(evt);
+            }
+        });
+        txtNombCliente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombClienteKeyTyped(evt);
+            }
+        });
+        jPanel1.add(txtNombCliente);
+
+        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 102, 48));
+
+        JpanelTipoDocumento.setBackground(new java.awt.Color(223, 230, 233));
         JpanelTipoDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder("Tipo Documento de Identidad"));
         JpanelTipoDocumento.setLayout(new java.awt.GridLayout(1, 0));
 
@@ -162,77 +252,12 @@ public class RegistrarCliente extends javax.swing.JFrame {
         });
         JpanelTipoDocumento.add(txtTipoDocumento);
 
-        JpanelNumeroDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder("Número Documento"));
-        JpanelNumeroDocumento.setLayout(new java.awt.GridLayout(1, 0));
+        jPanel2.add(JpanelTipoDocumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 222, 50));
 
-        txtdocumento.setText("Solo números");
-        txtdocumento.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txtdocumentoMouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                txtdocumentoMouseExited(evt);
-            }
-        });
-        txtdocumento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtdocumentoActionPerformed(evt);
-            }
-        });
-        txtdocumento.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtdocumentoKeyTyped(evt);
-            }
-        });
-        JpanelNumeroDocumento.add(txtdocumento);
-
-        jPanelNombre2.setBorder(javax.swing.BorderFactory.createTitledBorder("Nombre 2 :"));
-        jPanelNombre2.setLayout(new java.awt.GridLayout(1, 0));
-
-        txtNombCliente2.setText("ESCRIBA AQUÍ");
-        txtNombCliente2.setBorder(null);
-        txtNombCliente2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txtNombCliente2MouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                txtNombCliente2MouseExited(evt);
-            }
-        });
-        txtNombCliente2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombCliente2ActionPerformed(evt);
-            }
-        });
-        txtNombCliente2.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtNombCliente2KeyTyped(evt);
-            }
-        });
-        jPanelNombre2.add(txtNombCliente2);
-
-        jPanelApellido.setBorder(javax.swing.BorderFactory.createTitledBorder("Apellido"));
-        jPanelApellido.setLayout(new java.awt.GridLayout(1, 0));
-
-        txtApellido1.setText("ESCRIBA AQUÍ");
-        txtApellido1.setBorder(null);
-        txtApellido1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txtApellido1MouseClicked(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                txtApellido1MouseExited(evt);
-            }
-        });
-        txtApellido1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtApellido1KeyTyped(evt);
-            }
-        });
-        jPanelApellido.add(txtApellido1);
-
+        jPanelPromedioCompras.setBackground(new java.awt.Color(223, 230, 233));
         jPanelPromedioCompras.setBorder(javax.swing.BorderFactory.createTitledBorder("Número Compras Mensuales"));
 
+        rbtnUno.setBackground(new java.awt.Color(223, 230, 233));
         NumeroCompras.add(rbtnUno);
         rbtnUno.setText("1 a 10 ");
         rbtnUno.addActionListener(new java.awt.event.ActionListener() {
@@ -241,6 +266,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
             }
         });
 
+        rbtn11.setBackground(new java.awt.Color(223, 230, 233));
         NumeroCompras.add(rbtn11);
         rbtn11.setText("11 a 20");
         rbtn11.addActionListener(new java.awt.event.ActionListener() {
@@ -249,9 +275,11 @@ public class RegistrarCliente extends javax.swing.JFrame {
             }
         });
 
+        rbtn21.setBackground(new java.awt.Color(223, 230, 233));
         NumeroCompras.add(rbtn21);
         rbtn21.setText("21 a 30");
 
+        rbtn31.setBackground(new java.awt.Color(223, 230, 233));
         NumeroCompras.add(rbtn31);
         rbtn31.setText("31 o más");
 
@@ -275,106 +303,59 @@ public class RegistrarCliente extends javax.swing.JFrame {
                 .addComponent(rbtnUno)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rbtn11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(rbtn21)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rbtn31)
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        btnRegresar.setText("Regresar al menú");
-        btnRegresar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegresarActionPerformed(evt);
-            }
-        });
+        jPanel2.add(jPanelPromedioCompras, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, 140));
 
+        btnRegistrar.setBackground(new java.awt.Color(223, 230, 233));
+        btnRegistrar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnRegistrar.setText("Registrar Cliente");
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarActionPerformed(evt);
             }
         });
+        jPanel2.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, -1, -1));
 
+        btnEditar.setBackground(new java.awt.Color(223, 230, 233));
+        btnEditar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnEditar.setText("Mirar clientes");
         btnEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarActionPerformed(evt);
             }
         });
+        jPanel2.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 520, 117, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RegistrarCliente/luffy2-.jpg"))); // NOI18N
+        btnRegresar.setBackground(new java.awt.Color(223, 230, 233));
+        btnRegresar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnRegresar.setText("Regresar al menú");
+        btnRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegresarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 530, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\LUNA\\Downloads\\desktop-1536x864.jpg")); // NOI18N
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-530, -210, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
-                        .addComponent(jPanelNombre2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
-                        .addComponent(jPanelApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42)
-                        .addComponent(jPanelApellido2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(24, 24, 24))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(154, 154, 154)
-                        .addComponent(jLabel1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(JpanelTipoDocumento, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(61, 61, 61)
-                                .addComponent(JpanelNumeroDocumento, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jPanelPromedioCompras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(13, 13, 13)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(btnRegistrar))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel2)))
-                        .addGap(61, 61, 61))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnRegresar)
-                .addContainerGap())
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 623, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
-                    .addComponent(jPanelNombre2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelApellido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelApellido2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(JpanelTipoDocumento, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JpanelNumeroDocumento, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(53, 53, 53)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanelPromedioCompras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnRegistrar)
-                        .addGap(28, 28, 28)
-                        .addComponent(btnEditar))
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
-                .addComponent(btnRegresar)
-                .addContainerGap())
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 586, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -704,6 +685,7 @@ public void camposObligatorios(){
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanelApellido;
     private javax.swing.JPanel jPanelApellido2;
     private javax.swing.JPanel jPanelNombre2;
