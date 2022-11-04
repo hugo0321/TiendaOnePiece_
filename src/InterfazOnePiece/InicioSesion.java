@@ -30,7 +30,7 @@ public class InicioSesion extends javax.swing.JFrame {
         return iniciosesion;
     }
     
-String contraseña="onepiece";
+String contraseña="ONEPIECE";
  String usuario="ADMIN";
     /**
      * This method is called from within the constructor to initialize the form.
@@ -217,7 +217,7 @@ String contraseña="onepiece";
     }//GEN-LAST:event_btnIngresarKeyReleased
 
     private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
-        JOptionPane.showMessageDialog(this, "Usuario: ADMIN"+"\n"+"Contraseña: Nombre del anime sin espacio y minúsculas"+"\n"+"si por alguna razón cambió y olvidó la contraseña diríjase a la guía de usuario"+"\n"+"en la sección de ayuda del menú principal");
+        JOptionPane.showMessageDialog(this, "Usuario: ADMIN"+"\n"+"Contraseña: ONEPIECE"+"\n"+"si no recuerda la contraseña de clic en la calavarea para reiniciarla");
     }//GEN-LAST:event_btnAyudaActionPerformed
 
     private void btnAyudaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAyudaMouseExited
