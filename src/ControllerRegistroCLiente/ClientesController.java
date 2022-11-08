@@ -62,7 +62,7 @@ public class ClientesController implements DAOclientes{
     @Override
     public DefaultTableModel MostrarClientes() {
       DefaultTableModel modelo = new DefaultTableModel();
-         
+          
         modelo.addColumn("Primer Apellido");
         modelo.addColumn("Segundo Apellido");
         modelo.addColumn("Primer Nombre");

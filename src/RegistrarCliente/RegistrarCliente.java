@@ -416,10 +416,10 @@ public class RegistrarCliente extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(null,"Rellene las casillas en rojo");  
         }else{
          
-        String nombCliente= txtNombCliente.getText();
-        String nombCliente2= txtNombCliente2.getText();
-        String ApeCliente=txtApellido2.getText();
-        String ApeCliente2=txtApellido1.getText();
+        String nombCliente= txtNombCliente.getText().toUpperCase();
+        String nombCliente2= txtNombCliente2.getText().toUpperCase();
+        String ApeCliente=txtApellido2.getText().toUpperCase();
+        String ApeCliente2=txtApellido1.getText().toUpperCase();
         
 
 
@@ -520,10 +520,10 @@ public class RegistrarCliente extends javax.swing.JFrame {
        int key = evt.getKeyChar();
 
     boolean mayusculas = key >= 65 && key <= 90;
-    //boolean minusculas = key >= 97 && key <= 122;
+    boolean minusculas = key >= 97 && key <= 122;
     
             
-     if (!(mayusculas ))
+     if (!(mayusculas )&&!(minusculas))
     {
         evt.consume();
     }
@@ -542,8 +542,8 @@ public class RegistrarCliente extends javax.swing.JFrame {
          int key = evt.getKeyChar();
 
     boolean mayusculas = key >= 65 && key <= 90;
-          
-     if (!(mayusculas ))
+     boolean minusculas = key >= 97 && key <= 122;     
+     if (!(mayusculas )&&!(minusculas))
     {
         evt.consume();
     }
@@ -554,8 +554,8 @@ public class RegistrarCliente extends javax.swing.JFrame {
               int key = evt.getKeyChar();
 
     boolean mayusculas = key >= 65 && key <= 90;
-          
-     if (!(mayusculas ))
+     boolean minusculas = key >= 97 && key <= 122;     
+     if (!(mayusculas )&&!(minusculas))
     {
         evt.consume();
     }
@@ -577,8 +577,8 @@ public void camposObligatorios(){
               int key = evt.getKeyChar();
 
     boolean mayusculas = key >= 65 && key <= 90;
-          
-     if (!(mayusculas ))
+     boolean minusculas = key >= 97 && key <= 122;     
+     if (!(mayusculas )&&!(minusculas))
     {
         evt.consume();
     }
@@ -588,8 +588,8 @@ public void camposObligatorios(){
               int key = evt.getKeyChar();
 
     boolean mayusculas = key >= 65 && key <= 90;
-          
-     if (!(mayusculas ))
+    boolean minusculas = key >= 97 && key <= 122;    
+     if (!(mayusculas )&&!(minusculas))
     {
         evt.consume();
     }

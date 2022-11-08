@@ -28,6 +28,7 @@ DefaultComboBoxModel comboModel= new DefaultComboBoxModel(productos);
 DefaultComboBoxModel comboModel2= new DefaultComboBoxModel(identificacion);
 cboidentificacion.setModel(comboModel2);
 cboCompras.setModel(comboModel);
+
     }
 public static EditarCliente getInstance(){
         if(editarcliente==null)
@@ -68,26 +69,26 @@ public static EditarCliente getInstance(){
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cboCompras.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(cboCompras, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, -1, -1));
+        jPanel1.add(cboCompras, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, -1, -1));
 
         lblTítulo.setFont(new java.awt.Font("Rockwell Condensed", 1, 36)); // NOI18N
         lblTítulo.setText("Escriba los nuevos datos del cliente");
         jPanel1.add(lblTítulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, -1));
 
         JpanelNumeroDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder("Número de docmento:"));
-        JpanelNumeroDocumento.setLayout(new java.awt.GridLayout());
+        JpanelNumeroDocumento.setLayout(new java.awt.GridLayout(1, 0));
         JpanelNumeroDocumento.add(txtdocumento);
 
         jPanel1.add(JpanelNumeroDocumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, 230, -1));
 
         jpanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Primer Nombre"));
-        jpanel1.setLayout(new java.awt.GridLayout());
+        jpanel1.setLayout(new java.awt.GridLayout(1, 0));
         jpanel1.add(txtnombre);
 
         jPanel1.add(jpanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 230, -1));
 
         jpanelNombre2.setBorder(javax.swing.BorderFactory.createTitledBorder("Segundo Nombre"));
-        jpanelNombre2.setLayout(new java.awt.GridLayout());
+        jpanelNombre2.setLayout(new java.awt.GridLayout(1, 0));
 
         txtnombre2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,7 +100,7 @@ public static EditarCliente getInstance(){
         jPanel1.add(jpanelNombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, 230, -1));
 
         jpanelApellido.setBorder(javax.swing.BorderFactory.createTitledBorder("Primer Apellido"));
-        jpanelApellido.setLayout(new java.awt.GridLayout());
+        jpanelApellido.setLayout(new java.awt.GridLayout(1, 0));
 
         txtapellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,13 +112,13 @@ public static EditarCliente getInstance(){
         jPanel1.add(jpanelApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 230, -1));
 
         jpanelApellido2.setBorder(javax.swing.BorderFactory.createTitledBorder("Segundo Apellido"));
-        jpanelApellido2.setLayout(new java.awt.GridLayout());
+        jpanelApellido2.setLayout(new java.awt.GridLayout(1, 0));
         jpanelApellido2.add(txtapellido3);
 
         jPanel1.add(jpanelApellido2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, 230, -1));
 
         jLabel1.setText("Número de compras");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
 
         jButton1.setText("Regresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -136,8 +137,8 @@ public static EditarCliente getInstance(){
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 300, -1, -1));
 
         cboidentificacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(cboidentificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, -1, -1));
-        jPanel1.add(lblfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 290));
+        jPanel1.add(cboidentificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, -1, -1));
+        jPanel1.add(lblfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 350));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -152,7 +153,7 @@ public static EditarCliente getInstance(){
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -200,31 +201,27 @@ public static EditarCliente getInstance(){
            JOptionPane.showMessageDialog(null,"Rellene las casillas en rojo");  
         }else{
          
-        String nombCliente= txtnombre.getText();
-        String nombCliente2= txtnombre2.getText();
-        String ApeCliente=txtapellido3.getText();
-        String ApeCliente2=txtapellido.getText();
+        String nombCliente= txtnombre.getText().toUpperCase();
+        String nombCliente2= txtnombre2.getText().toUpperCase();
+        String ApeCliente=txtapellido3.getText().toUpperCase();
+        String ApeCliente2=txtapellido.getText().toUpperCase();
         
 
 //"CC","TI","Pasaporte","Registro civil"
          String TI="";
          String itemSeleccionado2 = (String)cboidentificacion.getSelectedItem();
-        if ("CC".equals(itemSeleccionado2)){
-          
-            TI="Cédula de Ciudadanía";
-        }else{
-            if("TI".equals(itemSeleccionado2)){
-              TI="Tarjeta de identidad"; 
-        }else{
-              if("Pasaporte".equals(itemSeleccionado2)){
-                TI="Pasaporte";  
-              }  else{
-                  if("Registro civil".equals(itemSeleccionado2)){
-                      TI="Registro civil";
-                  }
-              }
-            
-        }
+         if("CC".equals(itemSeleccionado2)){
+             TI="Cédula de ciudadanía";
+         }
+       if("TI".equals(itemSeleccionado2)){
+           TI="Tarjeta de identidad";
+       }
+       if("Pasaporte".equals(itemSeleccionado2)){
+           TI="Pasaporte";
+       }
+       if("Registro civil".equals(itemSeleccionado2)){
+           TI="Registro civil";
+       }
         String numident=txtdocumento.getText();
         String NCM="";
         String itemSeleccionado = (String)cboCompras.getSelectedItem();
@@ -248,12 +245,10 @@ public static EditarCliente getInstance(){
       
       clientCont.ActualizarCliente(cliente);
       JOptionPane.showMessageDialog(null,"Se han actualizado los datos de el cliente");
-       MirarClientes mirarclientes= MirarClientes.getInstance();
-        mirarclientes.setVisible(true);
-        this.dispose();
+ 
     }//GEN-LAST:event_jButton2ActionPerformed
     }
-    }
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
          MirarClientes mirarclientes= MirarClientes.getInstance();
         mirarclientes.setVisible(true);

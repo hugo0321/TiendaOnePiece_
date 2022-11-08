@@ -147,7 +147,7 @@ public class MirarClientes extends javax.swing.JFrame {
         RegistrarCliente interfaz = RegistrarCliente.getInstance();
        interfaz.setVisible(true);
        this.dispose();
-       JOptionPane.showMessageDialog(null,"Recuerde activar las letras MAYÚSCULAS");
+      // JOptionPane.showMessageDialog(null,"Recuerde activar las letras MAYÚSCULAS");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
