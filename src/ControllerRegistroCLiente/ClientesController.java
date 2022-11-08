@@ -5,6 +5,7 @@
 package ControllerRegistroCLiente;
 
 import DAOClientes.DAOclientes;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -61,6 +62,7 @@ public class ClientesController implements DAOclientes{
     @Override
     public DefaultTableModel MostrarClientes() {
       DefaultTableModel modelo = new DefaultTableModel();
+         
         modelo.addColumn("Primer Apellido");
         modelo.addColumn("Segundo Apellido");
         modelo.addColumn("Primer Nombre");
@@ -85,14 +87,57 @@ public class ClientesController implements DAOclientes{
     }
 
     @Override
-    public void ActualizarCliente(int codigo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean ActualizarCliente(String[] cliente) {
+        int fila=0;
+        for(int i=0;i<nCliente;i++){
+            if(clientes[0][i]==cliente[0]){
+                fila=i;
+                break;
+            }
+        }
+        clientes[0][fila]=cliente[0];
+        clientes[1][fila]=cliente[1];
+        clientes[2][fila]=cliente[2];
+        clientes[3][fila]=cliente[3];
+        clientes[4][fila]=cliente[4];
+        clientes[5][fila]=cliente[5];
+         clientes[6][fila]=cliente[6];
+        return true;
     }
+    
 
     
     @Override
     public void EliminarCliente(int codigo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         if( nCliente>=1)
+       {
+            
+            int seleccion = JOptionPane.showConfirmDialog(null,"seguro desea eliminar el cliente número: "+clientes[1][codigo]+" de la lista.", "confirmación",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
+            System.out.println(seleccion);
+            if(seleccion==0)
+            {
+                for (int i=codigo;i<100;i++)
+                {
+                    for(int j=0;j<7;j++)
+                    {
+                
+                        if(clientes[j][i] !=null)
+                        {
+                            clientes[j][i]=clientes[j][codigo+1];   
+                        }
+                    }
+                    codigo++;
+                }
+                nCliente--;
+                JOptionPane.showMessageDialog(null,"eliminado exitoso");
+            }
+        }
+       
+       else
+       {
+            JOptionPane.showMessageDialog(null, "Seleccione un cliente");   
+       }
     }
+    
     
 }
