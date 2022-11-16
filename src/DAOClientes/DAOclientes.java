@@ -17,5 +17,6 @@ public interface DAOclientes {
     public DefaultTableModel MostrarClientes();
     public boolean ActualizarCliente(String [] cliente);
     public void EliminarCliente(int codigo);
+    public boolean GuardarArchivo();
 
 }

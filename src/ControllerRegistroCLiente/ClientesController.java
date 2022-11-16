@@ -5,6 +5,14 @@
 package ControllerRegistroCLiente;
 
 import DAOClientes.DAOclientes;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.lang.System.Logger;
+import java.lang.System.Logger.Level;
+
+
+
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -88,20 +96,23 @@ public class ClientesController implements DAOclientes{
 
     @Override
     public boolean ActualizarCliente(String[] cliente) {
-        int fila=0;
+        int clientee=0;
         for(int i=0;i<nCliente;i++){
-            if(clientes[0][i]==cliente[0]){
-                fila=i;
+            for(int j=0;j<7;j++)
+            if(clientes[j][i].equals(cliente[j])){
+                clientee=i;
+                 //System. out. println("LA FILA "+clientee);
                 break;
             }
         }
-        clientes[0][fila]=cliente[0];
-        clientes[1][fila]=cliente[1];
-        clientes[2][fila]=cliente[2];
-        clientes[3][fila]=cliente[3];
-        clientes[4][fila]=cliente[4];
-        clientes[5][fila]=cliente[5];
-         clientes[6][fila]=cliente[6];
+        clientes[0][clientee]=cliente[0];
+        clientes[1][clientee]=cliente[1];
+        clientes[2][clientee]=cliente[2];
+        clientes[3][clientee]=cliente[3];
+        clientes[4][clientee]=cliente[4];
+        clientes[5][clientee]=cliente[5];
+         clientes[6][clientee]=cliente[6];
+         
         return true;
     }
     
@@ -113,7 +124,7 @@ public class ClientesController implements DAOclientes{
        {
             
             int seleccion = JOptionPane.showConfirmDialog(null,"seguro desea eliminar el cliente número: "+clientes[1][codigo]+" de la lista.", "confirmación",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
-            System.out.println(seleccion);
+            
             if(seleccion==0)
             {
                 for (int i=codigo;i<100;i++)
@@ -138,6 +149,33 @@ public class ClientesController implements DAOclientes{
             JOptionPane.showMessageDialog(null, "Seleccione un cliente");   
        }
     }
-    
-    
+    @Override
+    public boolean GuardarArchivo() {
+       FileWriter fw;
+        String datos="";
+        boolean gDatos=false;  
+        for(int i=0;i<nCliente;i++){
+            for(int j=0;j<7;j++){
+                if(clientes[j][i] != null)
+                    datos+=clientes[j][i]+"     -     ";
+            }
+            datos+="\n";
+        }     
+        try{
+            JFileChooser guardar = new JFileChooser();
+            guardar.showSaveDialog(null);
+            guardar.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+            //String archivo = ""+guardar.getSelectedFile();
+            String ruta = ""+guardar.getCurrentDirectory();
+            String nombre = guardar.getSelectedFile().getName();
+            fw=new FileWriter(ruta+"\\"+nombre+".txt");
+            fw.write(datos);         
+            fw.close();
+            gDatos=true;
+        } catch (IOException ex) {
+            java.util.logging.Logger.getLogger(ClientesController.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }  
+        return gDatos;
+    }
 }
+    
