@@ -30,8 +30,8 @@ public class InicioSesion extends javax.swing.JFrame {
         return iniciosesion;
     }
     
-String contraseña="ONEPIECE";
- String usuario="ADMIN";
+String contraseña="Onepiece";
+ String usuario="Admin";
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -106,6 +106,9 @@ String contraseña="ONEPIECE";
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPasswordField1MouseClicked(evt);
             }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jPasswordField1MouseEntered(evt);
+            }
         });
         jPasswordField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -119,6 +122,9 @@ String contraseña="ONEPIECE";
         txtUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txtUsuarioMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                txtUsuarioMouseEntered(evt);
             }
         });
         txtUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -217,7 +223,7 @@ String contraseña="ONEPIECE";
     }//GEN-LAST:event_btnIngresarKeyReleased
 
     private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
-        JOptionPane.showMessageDialog(this, "Usuario: ADMIN"+"\n"+"Contraseña: ONEPIECE"+"\n"+"si no recuerda la contraseña de clic en la calavarea para reiniciarla");
+        JOptionPane.showMessageDialog(this, "Usuario: Admin"+"\n"+"Contraseña: Onepiece"+"\n"+"si no recuerda la contraseña de clic en la calavarea para reiniciarla");
     }//GEN-LAST:event_btnAyudaActionPerformed
 
     private void btnAyudaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAyudaMouseExited
@@ -282,6 +288,14 @@ String contraseña="ONEPIECE";
             JOptionPane.showMessageDialog(null,"Usuario incorrecto"+"\n"+"Presione ESPACIO para continuar");
         }
     }//GEN-LAST:event_lblRestablecerContraseñaMouseClicked
+
+    private void txtUsuarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUsuarioMouseEntered
+        txtUsuario.setText("");
+    }//GEN-LAST:event_txtUsuarioMouseEntered
+
+    private void jPasswordField1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField1MouseEntered
+        jPasswordField1.setText("");
+    }//GEN-LAST:event_jPasswordField1MouseEntered
 public String cambiarContraseña(String contra){
  
     if(contra.equals(contraseña)){

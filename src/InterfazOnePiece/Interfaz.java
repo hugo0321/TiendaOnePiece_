@@ -295,7 +295,7 @@ public class Interfaz extends javax.swing.JFrame {
          RegistrarCliente registrarcliente = RegistrarCliente.getInstance();
        registrarcliente.setVisible(true);
        this.dispose();
-       JOptionPane.showMessageDialog(null,"Recuerde activar las letras MAYÚSCULAS");
+      // JOptionPane.showMessageDialog(null,"Recuerde activar las letras MAYÚSCULAS");
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed

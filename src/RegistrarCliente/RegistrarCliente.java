@@ -342,7 +342,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
         });
         jPanel2.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 530, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\LUNA\\Downloads\\desktop-1536x864.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RegistrarCliente/desktop-1536x864.jpg"))); // NOI18N
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-530, -210, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -390,35 +390,36 @@ public class RegistrarCliente extends javax.swing.JFrame {
                         txtApellido1.getText().equals("")||txtApellido1.getText().equals("OBLIGATORIO")||txtApellido1.getText().equals("ESCRIBA AQUÍ")||
                                 txtdocumento.getText().equals("")||txtdocumento.getText().equals("OBLIGATORIO")||txtdocumento.getText().equals("Sólo números")||(rbtnCC.isSelected()==false&&rbtnOtro.isSelected()==false))
                                         {
+                                            
            jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombre : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
             txtNombCliente.setForeground(new java.awt.Color(255, 0, 51));
-            txtNombCliente.setText("OBLIGATORIO");
+            //txtNombCliente.setText("OBLIGATORIO");
             
-            txtNombCliente2.setText("");
+            //txtNombCliente2.setText("");
             
             JpanelNumeroDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Número Documento : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
             txtdocumento.setForeground(new java.awt.Color(255, 0, 51));
-            txtdocumento.setText("OBLIGATORIO");
+            //txtdocumento.setText("OBLIGATORIO");
             
             jPanelApellido.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Apellido : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
             txtApellido2.setForeground(new java.awt.Color(255, 0, 51));
-            txtApellido2.setText("OBLIGATORIO");
+            //txtApellido2.setText("OBLIGATORIO");
             
             jPanelApellido2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Segundo Apellido : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
             txtApellido1.setForeground(new java.awt.Color(255, 0, 51));
-            txtApellido1.setText("OBLIGATORIO");
+            //txtApellido1.setText("OBLIGATORIO");
            
              JpanelTipoDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo Documento de Identidad : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));    
                 
            
              
-           JOptionPane.showMessageDialog(null,"Rellene las casillas faltantes");  
+           JOptionPane.showMessageDialog(null,"Rellene las casillas en rojo");  
         }else{
          
-        String nombCliente= txtNombCliente.getText();
-        String nombCliente2= txtNombCliente2.getText();
-        String ApeCliente=txtApellido2.getText();
-        String ApeCliente2=txtApellido1.getText();
+        String nombCliente= txtNombCliente.getText().toUpperCase();
+        String nombCliente2= txtNombCliente2.getText().toUpperCase();
+        String ApeCliente=txtApellido2.getText().toUpperCase();
+        String ApeCliente2=txtApellido1.getText().toUpperCase();
         
 
 
@@ -519,10 +520,10 @@ public class RegistrarCliente extends javax.swing.JFrame {
        int key = evt.getKeyChar();
 
     boolean mayusculas = key >= 65 && key <= 90;
-    //boolean minusculas = key >= 97 && key <= 122;
+    boolean minusculas = key >= 97 && key <= 122;
     
             
-     if (!(mayusculas ))
+     if (!(mayusculas )&&!(minusculas))
     {
         evt.consume();
     }
@@ -541,8 +542,8 @@ public class RegistrarCliente extends javax.swing.JFrame {
          int key = evt.getKeyChar();
 
     boolean mayusculas = key >= 65 && key <= 90;
-          
-     if (!(mayusculas ))
+     boolean minusculas = key >= 97 && key <= 122;     
+     if (!(mayusculas )&&!(minusculas))
     {
         evt.consume();
     }
@@ -553,8 +554,8 @@ public class RegistrarCliente extends javax.swing.JFrame {
               int key = evt.getKeyChar();
 
     boolean mayusculas = key >= 65 && key <= 90;
-          
-     if (!(mayusculas ))
+     boolean minusculas = key >= 97 && key <= 122;     
+     if (!(mayusculas )&&!(minusculas))
     {
         evt.consume();
     }
@@ -576,8 +577,8 @@ public void camposObligatorios(){
               int key = evt.getKeyChar();
 
     boolean mayusculas = key >= 65 && key <= 90;
-          
-     if (!(mayusculas ))
+     boolean minusculas = key >= 97 && key <= 122;     
+     if (!(mayusculas )&&!(minusculas))
     {
         evt.consume();
     }
@@ -587,41 +588,42 @@ public void camposObligatorios(){
               int key = evt.getKeyChar();
 
     boolean mayusculas = key >= 65 && key <= 90;
-          
-     if (!(mayusculas ))
+    boolean minusculas = key >= 97 && key <= 122;    
+     if (!(mayusculas )&&!(minusculas))
     {
         evt.consume();
     }
     }//GEN-LAST:event_txtTipoDocumentoKeyTyped
 
     private void txtNombClienteMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombClienteMouseExited
-     camposObligatorios();
+//     camposObligatorios();
            
        
     }//GEN-LAST:event_txtNombClienteMouseExited
 
     private void txtNombCliente2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNombCliente2MouseExited
-    if((txtNombCliente2.getText().equals(""))|| (txtNombCliente2.getText().equals("OPCIONAL"))){
+
+        //if((txtNombCliente2.getText().equals(""))|| (txtNombCliente2.getText().equals("OPCIONAL"))){
         //jPanelNombre2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Segundo  : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
   
-     txtNombCliente2.setText("");
-    }else{
+    // txtNombCliente2.setText("");
+   // }else{
        // jPanelNombre2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombre : ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0)));
      //txtNombCliente2.setForeground(new java.awt.Color(0, 0, 0));
-     txtNombCliente2.getText();
-    }
+    // txtNombCliente2.getText();
+   // }
     }//GEN-LAST:event_txtNombCliente2MouseExited
 
     private void txtApellido1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtApellido1MouseExited
-      if((txtApellido1.getText().equals(""))|| (txtApellido1.getText().equals("OBLIGATORIO"))){
-        jPanelApellido.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Apellido : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
-     txtApellido1.setForeground(new java.awt.Color(255, 0, 51));
-     txtApellido1.setText("OBLIGATORIO");
-    }else{
-        jPanelApellido.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Apellido : ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0)));
-     txtApellido1.setForeground(new java.awt.Color(0, 0, 0));
-     txtApellido1.getText();
-    }
+//      if((txtApellido1.getText().equals(""))|| (txtApellido1.getText().equals("OBLIGATORIO"))){
+   //     jPanelApellido.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Apellido : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
+   //  txtApellido1.setForeground(new java.awt.Color(255, 0, 51));
+    // txtApellido1.setText("OBLIGATORIO");
+   // }else{
+    //    jPanelApellido.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Apellido : ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0)));
+    // txtApellido1.setForeground(new java.awt.Color(0, 0, 0));
+   //  txtApellido1.getText();
+   // }
     }//GEN-LAST:event_txtApellido1MouseExited
 
     private void jPanelApellido2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelApellido2MouseExited
@@ -629,28 +631,28 @@ public void camposObligatorios(){
     }//GEN-LAST:event_jPanelApellido2MouseExited
 
     private void txtApellido2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtApellido2MouseExited
-        if((txtApellido2.getText().equals(""))|| (txtApellido2.getText().equals("OBLIGATORIO"))){
-        jPanelApellido2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Segundo Apellido : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
-     txtApellido2.setForeground(new java.awt.Color(255, 0, 51));
-     txtApellido2.setText("OBLIGATORIO");
-    }else{
-        jPanelApellido2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Segundo Apellido : ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0)));
-     txtApellido2.setForeground(new java.awt.Color(0, 0, 0));
-     txtApellido2.getText();
-    }
+//        if((txtApellido2.getText().equals(""))|| (txtApellido2.getText().equals("OBLIGATORIO"))){
+   //     jPanelApellido2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Segundo Apellido : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
+   //  txtApellido2.setForeground(new java.awt.Color(255, 0, 51));
+  //   txtApellido2.setText("OBLIGATORIO");
+  //  }else{
+  //      jPanelApellido2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Segundo Apellido : ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0)));
+   //  txtApellido2.setForeground(new java.awt.Color(0, 0, 0));
+   //  txtApellido2.getText();
+   // }
     }//GEN-LAST:event_txtApellido2MouseExited
 
     private void txtdocumentoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtdocumentoMouseExited
         // TODO add your handling code here:
-        if((txtdocumento.getText().equals(""))|| (txtdocumento.getText().equals("OBLIGATORIO"))){
-        JpanelNumeroDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Número Documento : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
-     txtdocumento.setForeground(new java.awt.Color(255, 0, 51));
-     txtdocumento.setText("OBLIGATORIO");
-    }else{
-        JpanelNumeroDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Número Documento : ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0)));
-     txtdocumento.setForeground(new java.awt.Color(0, 0, 0));
-     txtdocumento.getText();
-    }
+     //   if((txtdocumento.getText().equals(""))|| (txtdocumento.getText().equals("OBLIGATORIO"))){
+    //    JpanelNumeroDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Número Documento : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 51, 51)));
+    // txtdocumento.setForeground(new java.awt.Color(255, 0, 51));
+    // txtdocumento.setText("OBLIGATORIO");
+   // }else{
+   //     JpanelNumeroDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Número Documento : ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0)));
+    // txtdocumento.setForeground(new java.awt.Color(0, 0, 0));
+    // txtdocumento.getText();
+    //}
     }//GEN-LAST:event_txtdocumentoMouseExited
 
     private void rbtnOtroStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_rbtnOtroStateChanged
