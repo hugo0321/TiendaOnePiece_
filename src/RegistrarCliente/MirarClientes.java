@@ -9,6 +9,7 @@ import DAOClientes.DAOclientes;
 import InterfazOnePiece.Interfaz;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -16,7 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class MirarClientes extends javax.swing.JFrame {
       private static MirarClientes instancia=null;
-    
+    private DefaultTableModel modelo;
      /**
      * Creates new form MirarClientes
      */
@@ -28,8 +29,9 @@ public class MirarClientes extends javax.swing.JFrame {
     }
     
     private void ActuListaClientes(){
-        DAOclientes clientCont = ClientesController.getInstance();
-        jTable1.setModel(clientCont.MostrarClientes());
+        DAOclientes pokCont = ClientesController.getInstance();
+        modelo=pokCont.MostrarClientes();
+        jTable1.setModel(modelo);
     }
     
     public static MirarClientes getInstance(){
@@ -59,6 +61,7 @@ public class MirarClientes extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        btnguardar = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -107,7 +110,7 @@ public class MirarClientes extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2);
 
-        jButton4.setText("jButton4");
+        jButton4.setText("Eliminar Cliente");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -122,6 +125,14 @@ public class MirarClientes extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton5);
+
+        btnguardar.setText("Guardar txt");
+        btnguardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnguardarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnguardar);
 
         jButton3.setBackground(new java.awt.Color(223, 230, 233));
         jButton3.setText("Regresar al Menú");
@@ -168,6 +179,7 @@ public class MirarClientes extends javax.swing.JFrame {
             {
                 cliente.EliminarCliente(codigo);
             jTable1.setModel(cliente.MostrarClientes());
+            
             }
             
        }catch(Exception e)
@@ -177,10 +189,45 @@ public class MirarClientes extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        EditarCliente editarcliente = EditarCliente.getInstance();
-       editarcliente.setVisible(true);
-       this.dispose();
+       
+        try{
+            if(jTable1.getSelectedRow()>=0){
+                String seleccionTxt=""+modelo.getValueAt(jTable1.getSelectedRow(),jTable1.getSelectedColumn());
+                
+                if(!seleccionTxt.equals("null")){
+                    
+                    String[] cliente=new String[7];
+                    for(int i=0;i<7;i++){
+                        cliente[i]=modelo.getValueAt(jTable1.getSelectedRow(),i).toString();
+                    }
+                    EditarCliente editar = EditarCliente.getInstance();
+                    editar.setVisible(true);
+                    editar.Pordefecto();
+                  editar.datosPorActualizar(cliente);
+                    this.dispose();
+                    System. out. println("ES"+seleccionTxt);
+                }else{
+                    JOptionPane.showMessageDialog(null,"Debe seleccionar un campo no vacio", "Advertencia", JOptionPane.WARNING_MESSAGE);
+                }
+            }else{
+                JOptionPane.showMessageDialog(null,"Debe seleccionar un elemento", "Advertencia", JOptionPane.ERROR_MESSAGE);
+            }
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null,e.toString());
+        }
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void btnguardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnguardarActionPerformed
+        // TODO add your handling code here:
+        DAOclientes cliCont = ClientesController.getInstance();
+        if(cliCont.GuardarArchivo()){
+            JOptionPane.showMessageDialog(null,"Guardado Exitoso");
+        }else{
+            JOptionPane.showMessageDialog(null,"Error al guardar");
+    }
+    
+    }//GEN-LAST:event_btnguardarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,6 +235,7 @@ public class MirarClientes extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnguardar;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;

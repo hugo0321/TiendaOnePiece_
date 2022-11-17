@@ -77,12 +77,29 @@ public static EditarCliente getInstance(){
 
         JpanelNumeroDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder("Número de docmento:"));
         JpanelNumeroDocumento.setLayout(new java.awt.GridLayout(1, 0));
+
+        txtdocumento.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtdocumentoKeyTyped(evt);
+            }
+        });
         JpanelNumeroDocumento.add(txtdocumento);
 
         jPanel1.add(JpanelNumeroDocumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, 230, -1));
 
         jpanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Primer Nombre"));
         jpanel1.setLayout(new java.awt.GridLayout(1, 0));
+
+        txtnombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtnombreActionPerformed(evt);
+            }
+        });
+        txtnombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtnombreKeyTyped(evt);
+            }
+        });
         jpanel1.add(txtnombre);
 
         jPanel1.add(jpanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 230, -1));
@@ -93,6 +110,11 @@ public static EditarCliente getInstance(){
         txtnombre2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtnombre2ActionPerformed(evt);
+            }
+        });
+        txtnombre2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtnombre2KeyTyped(evt);
             }
         });
         jpanelNombre2.add(txtnombre2);
@@ -107,12 +129,23 @@ public static EditarCliente getInstance(){
                 txtapellidoActionPerformed(evt);
             }
         });
+        txtapellido.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtapellidoKeyTyped(evt);
+            }
+        });
         jpanelApellido.add(txtapellido);
 
         jPanel1.add(jpanelApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 230, -1));
 
         jpanelApellido2.setBorder(javax.swing.BorderFactory.createTitledBorder("Segundo Apellido"));
         jpanelApellido2.setLayout(new java.awt.GridLayout(1, 0));
+
+        txtapellido3.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtapellido3KeyTyped(evt);
+            }
+        });
         jpanelApellido2.add(txtapellido3);
 
         jPanel1.add(jpanelApellido2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, 230, -1));
@@ -167,7 +200,18 @@ public static EditarCliente getInstance(){
     private void txtnombre2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnombre2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtnombre2ActionPerformed
+public void Pordefecto(){
+     txtnombre.setText("");
+        txtnombre2.setText("");
+        txtapellido.setText("");
+        txtapellido3.setText("");
+        txtdocumento.setText("");
+        txtdocumento.setText("Solo números");
+        
+        //tipodocumento.setSelected((ButtonModel) rbtnCC, true);
+        
 
+}
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
        DAOclientes clientCont = ClientesController.getInstance();
         if(txtnombre.getText().equals("")||txtnombre.getText().equals("OBLIGATORIO")||txtnombre.getText().equals("ESCRIBA AQUÍ")||
@@ -248,12 +292,93 @@ public static EditarCliente getInstance(){
  
     }//GEN-LAST:event_jButton2ActionPerformed
     }
-    
+    public void datosPorActualizar(String[] cliente){
+        txtapellido.setText(cliente[0]);
+        txtapellido3.setText(cliente[1]);
+        txtnombre.setText(cliente[2]);
+        txtnombre2.setText(cliente[3]);
+        txtdocumento.setText(cliente[5]);
+        
+        
+        
+        
+        
+        
+    }
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
          MirarClientes mirarclientes= MirarClientes.getInstance();
         mirarclientes.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtnombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtnombreActionPerformed
+
+    private void txtnombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnombreKeyTyped
+   int key = evt.getKeyChar();
+
+    boolean mayusculas = key >= 65 && key <= 90;
+    boolean minusculas = key >= 97 && key <= 122;
+    
+            
+     if (!(mayusculas )&&!(minusculas))
+    {
+        evt.consume();
+    }
+    }//GEN-LAST:event_txtnombreKeyTyped
+
+    private void txtnombre2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnombre2KeyTyped
+      int key = evt.getKeyChar();
+
+    boolean mayusculas = key >= 65 && key <= 90;
+    boolean minusculas = key >= 97 && key <= 122;
+    
+            
+     if (!(mayusculas )&&!(minusculas))
+    {
+        evt.consume();
+    }
+    }//GEN-LAST:event_txtnombre2KeyTyped
+
+    private void txtapellidoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtapellidoKeyTyped
+       int key = evt.getKeyChar();
+
+    boolean mayusculas = key >= 65 && key <= 90;
+    boolean minusculas = key >= 97 && key <= 122;
+    
+            
+     if (!(mayusculas )&&!(minusculas))
+    {
+        evt.consume();
+    }
+    }//GEN-LAST:event_txtapellidoKeyTyped
+
+    private void txtapellido3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtapellido3KeyTyped
+       int key = evt.getKeyChar();
+
+    boolean mayusculas = key >= 65 && key <= 90;
+    boolean minusculas = key >= 97 && key <= 122;
+    
+            
+     if (!(mayusculas )&&!(minusculas))
+    {
+        evt.consume();
+    }
+    }//GEN-LAST:event_txtapellido3KeyTyped
+
+    private void txtdocumentoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtdocumentoKeyTyped
+          int key = evt.getKeyChar();
+
+    boolean mayusculas = key >= 65 && key <= 90;
+    boolean minusculas = key >= 97 && key <= 122;
+    
+            
+     if (!(mayusculas )&&!(minusculas))
+    {
+        evt.consume();
+    }
+    }//GEN-LAST:event_txtdocumentoKeyTyped
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
