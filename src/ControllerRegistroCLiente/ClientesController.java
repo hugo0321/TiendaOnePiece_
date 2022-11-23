@@ -5,6 +5,8 @@
 package ControllerRegistroCLiente;
 
 import DAOClientes.DAOclientes;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.System.Logger;
@@ -176,6 +178,51 @@ public class ClientesController implements DAOclientes{
             java.util.logging.Logger.getLogger(ClientesController.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }  
         return gDatos;
+    }
+    
+    //////////////////////////////////
+    
+    @Override
+    
+    public boolean SubirArchivo(String root) {
+        FileReader fr;
+        BufferedReader lector;
+        boolean sDatos=false;
+        int cDatUsu = 0;
+        String datos = "";
+        
+        try{
+            fr = new FileReader(root);
+            if (fr.ready()){
+                lector = new BufferedReader(fr);
+                String cadena;
+                while ((cadena =lector.readLine()) != null){
+                    datos = datos + cadena + "/";
+                    cDatUsu++;
+                }
+            }else{
+                System.out.println("El archivo no esta listo...");
+            }
+        } catch (IOException ex) {
+            System.out.println(ex.toString());
+        }
+        
+        String [] datUsu = new String[cDatUsu];
+        String [] sepUsu = datos.split("/");
+        for (int i = 0; i < datUsu.length; i++){
+            datUsu[i] = sepUsu[i];
+            String [] usuIden = datUsu[i].split("-");
+            for(int j = nCliente;j < 100;j++){
+                for(int k = 0;k < 7;k++){
+                    clientes[k][j] = usuIden[k];
+                }
+                nCliente++;
+                
+                break;
+            }
+            sDatos = true;
+        }
+        return false;
     }
 }
     

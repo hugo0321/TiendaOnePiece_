@@ -7,8 +7,10 @@ package RegistrarCliente;
 import ControllerRegistroCLiente.ClientesController;
 import DAOClientes.DAOclientes;
 import InterfazOnePiece.Interfaz;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -62,6 +64,7 @@ public class MirarClientes extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         btnguardar = new javax.swing.JButton();
+        btnSubir = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -133,6 +136,14 @@ public class MirarClientes extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnguardar);
+
+        btnSubir.setText("Subir Archivo");
+        btnSubir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnSubir);
 
         jButton3.setBackground(new java.awt.Color(223, 230, 233));
         jButton3.setText("Regresar al Menú");
@@ -229,12 +240,31 @@ public class MirarClientes extends javax.swing.JFrame {
     
     }//GEN-LAST:event_btnguardarActionPerformed
 
+    private void btnSubirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubirActionPerformed
+        // TODO add your handling code here:
+            DAOclientes usuCon = ClientesController.getInstance();
+        JFileChooser fileUsu = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter(
+        "Documento de texto (*.txt)", "txt");
+        fileUsu.setFileFilter(filter);
+        int returnVal = fileUsu.showOpenDialog(rootPane);
+        if(returnVal == JFileChooser.APPROVE_OPTION) {
+            String archivo = fileUsu.getSelectedFile().toString();
+            
+            if(usuCon.SubirArchivo(archivo))
+                ActuListaClientes();
+            
+        }
+        ActuListaClientes();
+    }//GEN-LAST:event_btnSubirActionPerformed
+
     /**
      * @param args the command line arguments
      */
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnSubir;
     private javax.swing.JButton btnguardar;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
