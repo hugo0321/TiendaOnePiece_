@@ -18,5 +18,6 @@ public interface DAOclientes {
     public boolean ActualizarCliente(String [] cliente);
     public void EliminarCliente(int codigo);
     public boolean GuardarArchivo();
+    public boolean SubirArchivo(String root);
 
 }
