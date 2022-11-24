@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Hugo/Dropbox/PC/Desktop/proyecto%20APO/Tienda%20One%20Piece%201/src/RegistrarCliente/EditarCliente.java</file>
-            <file>file:/C:/Users/Hugo/Dropbox/PC/Desktop/proyecto%20APO/Tienda%20One%20Piece%201/src/ControllerRegistroCLiente/ClientesController.java</file>
+            <file>file:/C:/Users/Sebas/Documents/TiendaOnePiece_-master/src/ControllerRegistroCLiente/ClientesController.java</file>
+            <file>file:/C:/Users/Sebas/Documents/TiendaOnePiece_-master/src/DAOClientes/DAOclientes.java</file>
+            <file>file:/C:/Users/Sebas/Documents/TiendaOnePiece_-master/src/RegistrarCliente/MirarClientes.java</file>
+            <file>file:/C:/Users/Sebas/Documents/TiendaOnePiece_-master/src/VentasArtículos/InterfazVentas.java</file>
         </group>
     </open-files>
 </project-private>

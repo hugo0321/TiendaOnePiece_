@@ -13,7 +13,7 @@ import javax.swing.table.DefaultTableModel;
 public interface DAOclientes {
     
     public boolean AgregarCliente(String cliente,String ccliente, String tcliente,String scliente,String vcliente,String ecliente, String zcliente);
-    public boolean AgregarCliente(String[] cliente);
+    public boolean AgregarCliente(String[] cliente) ;
     public DefaultTableModel MostrarClientes();
     public boolean ActualizarCliente(String [] cliente);
     public void EliminarCliente(int codigo);

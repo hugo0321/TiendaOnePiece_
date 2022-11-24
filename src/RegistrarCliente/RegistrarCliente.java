@@ -7,9 +7,14 @@ package RegistrarCliente;
 import ControllerRegistroCLiente.ClientesController;
 import DAOClientes.DAOclientes;
 import InterfazOnePiece.Interfaz;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
 import javax.swing.ButtonGroup;
 import javax.swing.ButtonModel;
 import javax.swing.JOptionPane;
+import java.rmi.registry.LocateRegistry;
+import java.rmi.registry.Registry;
+import RegistrarCliente.RegistrarCliente;
 
 /**
  *
@@ -34,6 +39,20 @@ public class RegistrarCliente extends javax.swing.JFrame {
         if(registrarCliente == null)
             registrarCliente=new RegistrarCliente();
         return registrarCliente;
+    }
+    public void ConexionServidor(){
+        try {
+            Registry registro= LocateRegistry.getRegistry("127.0.0.1", 7777);
+            RegistrarCliente interfaz = (RegistrarCliente) registro.lookup("RMIserver");
+            
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+ 
+    }
+        public static void main(String[] args) {
+        // TODO code application logic here
+        new RegistrarCliente().ConexionServidor();
     }
 
     /**
