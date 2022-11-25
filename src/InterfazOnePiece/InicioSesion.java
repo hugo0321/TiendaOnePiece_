@@ -276,10 +276,10 @@ String contraseña="Onepiece";
         String Usuario= JOptionPane.showInputDialog("Introduzca el usuario de la cuenta principal");
         if(Usuario.equals(usuario)){
             String contra= JOptionPane.showInputDialog("Introduzca la contraseña");
-            if(contra.equals("onepiece")){
+            if(contra.equals("Onepiece")){
                 JOptionPane.showMessageDialog(null,"la contraseña se ha reestablecido con éxito"+"\n"+"Presione ESPACIO para continuar");
                 
-                contraseña="onepiece";
+                contraseña="Onepiece";
                // contraseñaOlvidada(contra,Usuario);
             }else{
                 JOptionPane.showMessageDialog(null,"Contraseña incorrecta"+"\n"+"Presione ESPACIO para continuar");
@@ -290,7 +290,7 @@ String contraseña="Onepiece";
     }//GEN-LAST:event_lblRestablecerContraseñaMouseClicked
 
     private void txtUsuarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUsuarioMouseEntered
-        txtUsuario.setText("");
+//        txtUsuario.setText("");
     }//GEN-LAST:event_txtUsuarioMouseEntered
 
     private void jPasswordField1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPasswordField1MouseEntered

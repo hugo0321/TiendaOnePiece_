@@ -420,7 +420,26 @@ public class RegistrarCliente extends javax.swing.JFrame {
         String nombCliente2= txtNombCliente2.getText().toUpperCase();
         String ApeCliente=txtApellido2.getText().toUpperCase();
         String ApeCliente2=txtApellido1.getText().toUpperCase();
-        
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nombre : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0)));
+            txtNombCliente.setForeground(new java.awt.Color(255, 0, 51));
+            //txtNombCliente.setText("OBLIGATORIO");
+            
+            //txtNombCliente2.setText("");
+            
+            JpanelNumeroDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Número Documento : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0)));
+            txtdocumento.setForeground(new java.awt.Color(0, 0, 0));
+            //txtdocumento.setText("OBLIGATORIO");
+            
+            jPanelApellido.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Apellido : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0)));
+            txtApellido2.setForeground(new java.awt.Color(0, 0, 0));
+            //txtApellido2.setText("OBLIGATORIO");
+            
+            jPanelApellido2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Segundo Apellido : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0)));
+            txtApellido1.setForeground(new java.awt.Color(0, 0, 0));
+            //txtApellido1.setText("OBLIGATORIO");
+           
+             JpanelTipoDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tipo Documento de Identidad : **", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(0, 0, 0)));    
+                
 
 
          String TI="";
@@ -478,6 +497,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
         rbtn31.setSelected(false);
         //tipodocumento.setSelected((ButtonModel) rbtnCC, true);
         NumeroCompras.clearSelection();
+        
         
  }
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed

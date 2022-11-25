@@ -113,6 +113,7 @@ public class MirarClientes extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2);
 
+        jButton4.setBackground(new java.awt.Color(223, 230, 233));
         jButton4.setText("Eliminar Cliente");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,6 +122,7 @@ public class MirarClientes extends javax.swing.JFrame {
         });
         jPanel1.add(jButton4);
 
+        jButton5.setBackground(new java.awt.Color(223, 230, 233));
         jButton5.setText("Editar Cliente");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,6 +131,7 @@ public class MirarClientes extends javax.swing.JFrame {
         });
         jPanel1.add(jButton5);
 
+        btnguardar.setBackground(new java.awt.Color(223, 230, 233));
         btnguardar.setText("Guardar txt");
         btnguardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,6 +140,7 @@ public class MirarClientes extends javax.swing.JFrame {
         });
         jPanel1.add(btnguardar);
 
+        btnSubir.setBackground(new java.awt.Color(223, 230, 233));
         btnSubir.setText("Subir Archivo");
         btnSubir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -106,6 +106,7 @@ public class ClientesController implements DAOclientes{
                  //System. out. println("LA FILA "+clientee);
                 break;
             }
+            
         }
         clientes[0][clientee]=cliente[0];
         clientes[1][clientee]=cliente[1];

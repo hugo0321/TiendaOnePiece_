@@ -22,6 +22,8 @@ public class EditarCliente extends javax.swing.JFrame {
      */
     private EditarCliente() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
         String productos[]={"1 a 10 compras","11 a 20 compras","21 a 30 compras","31 o más compras"};
         String identificacion[]={"CC","TI","Pasaporte","Registro civil"};
 DefaultComboBoxModel comboModel= new DefaultComboBoxModel(productos);
@@ -65,6 +67,7 @@ public static EditarCliente getInstance(){
         lblfondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Editar Cliente One Piece v.1.1");
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -72,12 +75,19 @@ public static EditarCliente getInstance(){
         jPanel1.add(cboCompras, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, -1, -1));
 
         lblTítulo.setFont(new java.awt.Font("Rockwell Condensed", 1, 36)); // NOI18N
+        lblTítulo.setForeground(new java.awt.Color(0, 255, 51));
         lblTítulo.setText("Escriba los nuevos datos del cliente");
         jPanel1.add(lblTítulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, -1));
 
+        JpanelNumeroDocumento.setBackground(new java.awt.Color(223, 230, 233));
         JpanelNumeroDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder("Número de docmento:"));
         JpanelNumeroDocumento.setLayout(new java.awt.GridLayout(1, 0));
 
+        txtdocumento.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtdocumentoMouseClicked(evt);
+            }
+        });
         txtdocumento.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtdocumentoKeyTyped(evt);
@@ -87,9 +97,15 @@ public static EditarCliente getInstance(){
 
         jPanel1.add(JpanelNumeroDocumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, 230, -1));
 
+        jpanel1.setBackground(new java.awt.Color(223, 230, 233));
         jpanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Primer Nombre"));
         jpanel1.setLayout(new java.awt.GridLayout(1, 0));
 
+        txtnombre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtnombreMouseClicked(evt);
+            }
+        });
         txtnombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtnombreActionPerformed(evt);
@@ -104,9 +120,15 @@ public static EditarCliente getInstance(){
 
         jPanel1.add(jpanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 230, -1));
 
+        jpanelNombre2.setBackground(new java.awt.Color(223, 230, 233));
         jpanelNombre2.setBorder(javax.swing.BorderFactory.createTitledBorder("Segundo Nombre"));
         jpanelNombre2.setLayout(new java.awt.GridLayout(1, 0));
 
+        txtnombre2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtnombre2MouseClicked(evt);
+            }
+        });
         txtnombre2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtnombre2ActionPerformed(evt);
@@ -119,11 +141,17 @@ public static EditarCliente getInstance(){
         });
         jpanelNombre2.add(txtnombre2);
 
-        jPanel1.add(jpanelNombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, 230, -1));
+        jPanel1.add(jpanelNombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 70, 230, -1));
 
+        jpanelApellido.setBackground(new java.awt.Color(223, 230, 233));
         jpanelApellido.setBorder(javax.swing.BorderFactory.createTitledBorder("Primer Apellido"));
         jpanelApellido.setLayout(new java.awt.GridLayout(1, 0));
 
+        txtapellido.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtapellidoMouseClicked(evt);
+            }
+        });
         txtapellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtapellidoActionPerformed(evt);
@@ -138,9 +166,15 @@ public static EditarCliente getInstance(){
 
         jPanel1.add(jpanelApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 230, -1));
 
+        jpanelApellido2.setBackground(new java.awt.Color(223, 230, 233));
         jpanelApellido2.setBorder(javax.swing.BorderFactory.createTitledBorder("Segundo Apellido"));
         jpanelApellido2.setLayout(new java.awt.GridLayout(1, 0));
 
+        txtapellido3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtapellido3MouseClicked(evt);
+            }
+        });
         txtapellido3.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtapellido3KeyTyped(evt);
@@ -148,19 +182,25 @@ public static EditarCliente getInstance(){
         });
         jpanelApellido2.add(txtapellido3);
 
-        jPanel1.add(jpanelApellido2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 140, 230, -1));
+        jPanel1.add(jpanelApellido2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 140, 230, -1));
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 153, 102));
         jLabel1.setText("Número de compras");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
 
+        jButton1.setBackground(new java.awt.Color(223, 230, 233));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jButton1.setText("Regresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, -1, -1));
 
+        jButton2.setBackground(new java.awt.Color(223, 230, 233));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
         jButton2.setText("Confirmar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,23 +211,19 @@ public static EditarCliente getInstance(){
 
         cboidentificacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(cboidentificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, -1, -1));
-        jPanel1.add(lblfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 350));
+
+        lblfondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Hugo\\Downloads\\El-fondo-de-pantalla-de-One-Piece-que-se-merece-tu-PC2.png")); // NOI18N
+        jPanel1.add(lblfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 790, 480));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 694, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 786, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 476, Short.MAX_VALUE)
         );
 
         pack();
@@ -289,6 +325,9 @@ public void Pordefecto(){
       
       clientCont.ActualizarCliente(cliente);
       JOptionPane.showMessageDialog(null,"Se han actualizado los datos de el cliente");
+      MirarClientes mirarclientes= MirarClientes.getInstance();
+        mirarclientes.setVisible(true);
+        this.dispose();
  
     }//GEN-LAST:event_jButton2ActionPerformed
     }
@@ -368,17 +407,28 @@ public void Pordefecto(){
     }//GEN-LAST:event_txtapellido3KeyTyped
 
     private void txtdocumentoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtdocumentoKeyTyped
-          int key = evt.getKeyChar();
-
-    boolean mayusculas = key >= 65 && key <= 90;
-    boolean minusculas = key >= 97 && key <= 122;
-    
-            
-     if (!(mayusculas )&&!(minusculas))
-    {
-        evt.consume();
-    }
+     if(!Character.isDigit(evt.getKeyChar())) evt.consume();
     }//GEN-LAST:event_txtdocumentoKeyTyped
+
+    private void txtnombreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtnombreMouseClicked
+       txtnombre.setText("");
+    }//GEN-LAST:event_txtnombreMouseClicked
+
+    private void txtnombre2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtnombre2MouseClicked
+       txtnombre2.setText("");
+    }//GEN-LAST:event_txtnombre2MouseClicked
+
+    private void txtapellidoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtapellidoMouseClicked
+        txtapellido.setText("");
+    }//GEN-LAST:event_txtapellidoMouseClicked
+
+    private void txtapellido3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtapellido3MouseClicked
+        txtapellido3.setText("");
+    }//GEN-LAST:event_txtapellido3MouseClicked
+
+    private void txtdocumentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtdocumentoMouseClicked
+        txtdocumento.setText("");
+    }//GEN-LAST:event_txtdocumentoMouseClicked
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
