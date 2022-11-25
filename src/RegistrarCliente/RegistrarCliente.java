@@ -479,6 +479,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
         //tipodocumento.setSelected((ButtonModel) rbtnCC, true);
         NumeroCompras.clearSelection();
         
+        
  }
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
      MirarClientes mirarclientes= MirarClientes.getInstance();

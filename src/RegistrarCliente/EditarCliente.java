@@ -289,6 +289,9 @@ public void Pordefecto(){
       
       clientCont.ActualizarCliente(cliente);
       JOptionPane.showMessageDialog(null,"Se han actualizado los datos de el cliente");
+      MirarClientes mirarclientes= MirarClientes.getInstance();
+        mirarclientes.setVisible(true);
+        this.dispose();
  
     }//GEN-LAST:event_jButton2ActionPerformed
     }
@@ -368,16 +371,7 @@ public void Pordefecto(){
     }//GEN-LAST:event_txtapellido3KeyTyped
 
     private void txtdocumentoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtdocumentoKeyTyped
-          int key = evt.getKeyChar();
-
-    boolean mayusculas = key >= 65 && key <= 90;
-    boolean minusculas = key >= 97 && key <= 122;
-    
-            
-     if (!(mayusculas )&&!(minusculas))
-    {
-        evt.consume();
-    }
+     if(!Character.isDigit(evt.getKeyChar())) evt.consume();
     }//GEN-LAST:event_txtdocumentoKeyTyped
     
 

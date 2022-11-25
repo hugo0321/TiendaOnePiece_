@@ -74,7 +74,6 @@ public class Interfaz extends javax.swing.JFrame {
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem18 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
-        jMenuItem12 = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -264,11 +263,6 @@ public class Interfaz extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem11);
 
-        jMenuItem12.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/apreton-de-manos.png"))); // NOI18N
-        jMenuItem12.setText("Quejas y Devoluciones");
-        jMenu4.add(jMenuItem12);
-
         jMenuItem10.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/auriculares.png"))); // NOI18N
         jMenuItem10.setText("Contactos");
@@ -318,7 +312,7 @@ public class Interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     private void jMenuItem14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem14ActionPerformed
-        JOptionPane.showMessageDialog(this, "Los datos de la cuenta son :"+"\n"+"Usuario: ADMIN"+"\n"+"Contraseña: onepiece");
+        JOptionPane.showMessageDialog(this, "Los datos de la cuenta son :"+"\n"+"Usuario: Admin"+"\n"+"Contraseña: Onepiece");
     }//GEN-LAST:event_jMenuItem14ActionPerformed
 
     private void jMenuItem15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem15ActionPerformed
@@ -364,7 +358,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
-    private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem15;
