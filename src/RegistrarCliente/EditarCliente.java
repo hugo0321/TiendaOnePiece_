@@ -212,7 +212,7 @@ public static EditarCliente getInstance(){
         cboidentificacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(cboidentificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, -1, -1));
 
-        lblfondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Hugo\\Downloads\\El-fondo-de-pantalla-de-One-Piece-que-se-merece-tu-PC2.png")); // NOI18N
+        lblfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RegistrarCliente/El-fondo-de-pantalla-de-One-Piece-que-se-merece-tu-PC2.png"))); // NOI18N
         jPanel1.add(lblfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 790, 480));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
