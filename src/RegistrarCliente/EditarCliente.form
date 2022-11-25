@@ -306,7 +306,7 @@
         <Component class="javax.swing.JLabel" name="lblfondo">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Hugo\Downloads\El-fondo-de-pantalla-de-One-Piece-que-se-merece-tu-PC2.png"/>
+              <Image iconType="3" name="/RegistrarCliente/El-fondo-de-pantalla-de-One-Piece-que-se-merece-tu-PC2.png"/>
             </Property>
           </Properties>
           <Constraints>
