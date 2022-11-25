@@ -88,15 +88,16 @@ public class InterfazVentas extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 3, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(223, 230, 233));
-        jLabel1.setText("Facturación");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, 230, -1));
+        jLabel1.setText("FACTURACIÓN");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 290, -1));
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(223, 230, 233));
         jLabel2.setText("Producto");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, -1));
 
+        cboProducto.setBackground(new java.awt.Color(223, 230, 233));
         cboProducto.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         cboProducto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cboProducto.addActionListener(new java.awt.event.ActionListener() {
@@ -104,13 +105,13 @@ public class InterfazVentas extends javax.swing.JFrame {
                 cboProductoActionPerformed(evt);
             }
         });
-        jPanel1.add(cboProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, 124, 28));
+        jPanel1.add(cboProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, 124, 30));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(223, 230, 233));
         jLabel4.setText("Cantidad");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, -1));
 
         spnCantidad.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         spnCantidad.setModel(new javax.swing.SpinnerNumberModel(1, 1, 10, 1));
@@ -119,30 +120,31 @@ public class InterfazVentas extends javax.swing.JFrame {
                 spnCantidadStateChanged(evt);
             }
         });
-        jPanel1.add(spnCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 180, 73, -1));
+        jPanel1.add(spnCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 73, -1));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Precio");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 130, -1, -1));
 
         lblPrecio.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         lblPrecio.setForeground(new java.awt.Color(255, 255, 255));
         lblPrecio.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblPrecio.setText("$0 COP");
-        jPanel1.add(lblPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, -1, -1));
+        jPanel1.add(lblPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 130, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Myanmar Text", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Myanmar Text", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Importe");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 190, -1, -1));
 
         lblImporte.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         lblImporte.setForeground(new java.awt.Color(255, 255, 255));
         lblImporte.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblImporte.setText("$0 COP");
-        jPanel1.add(lblImporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 180, -1, -1));
+        jPanel1.add(lblImporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 190, 70, 40));
 
+        tblProductos.setBackground(new java.awt.Color(223, 230, 233));
         tblProductos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -156,9 +158,10 @@ public class InterfazVentas extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblProductos);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, -1, 186));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, 186));
 
-        btnAgregar.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        btnAgregar.setBackground(new java.awt.Color(223, 230, 233));
+        btnAgregar.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         btnAgregar.setText("AGREGAR");
         btnAgregar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -173,7 +176,7 @@ public class InterfazVentas extends javax.swing.JFrame {
                 btnAgregarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 330, -1, 42));
+        jPanel1.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 390, -1, 42));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
@@ -212,7 +215,8 @@ public class InterfazVentas extends javax.swing.JFrame {
         lblTotal.setText("$0 COP");
         jPanel1.add(lblTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 590, 83, -1));
 
-        btnQuitar.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        btnQuitar.setBackground(new java.awt.Color(223, 230, 233));
+        btnQuitar.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         btnQuitar.setText("Nueva Venta");
         btnQuitar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -221,14 +225,15 @@ public class InterfazVentas extends javax.swing.JFrame {
         });
         jPanel1.add(btnQuitar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 650, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(223, 230, 233));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jButton1.setText("Regresar al Menú");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 660, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 650, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/VentasArtículos/one-piece-artwork_1280x720_xtrafondos.com.jpg"))); // NOI18N
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(-380, -300, 1850, 1330));

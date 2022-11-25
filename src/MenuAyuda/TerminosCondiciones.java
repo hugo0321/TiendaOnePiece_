@@ -47,12 +47,12 @@ public class TerminosCondiciones extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jPanel3 = new javax.swing.JPanel();
         cH_Aceptar = new javax.swing.JCheckBox();
-        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Términos y Condiciones One Piece v1.1\n");
         setMinimumSize(new java.awt.Dimension(700, 400));
 
+        jLabel1.setBackground(new java.awt.Color(223, 230, 233));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("TÉRMINOS Y CONDICIONES");
@@ -60,6 +60,7 @@ public class TerminosCondiciones extends javax.swing.JFrame {
 
         jPanel1.setLayout(new java.awt.GridLayout(1, 0));
 
+        btnContinuar.setBackground(new java.awt.Color(223, 230, 233));
         btnContinuar.setText("Continuar al programa");
         btnContinuar.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -73,6 +74,7 @@ public class TerminosCondiciones extends javax.swing.JFrame {
         });
         jPanel1.add(btnContinuar);
 
+        btnSalir.setBackground(new java.awt.Color(223, 230, 233));
         btnSalir.setText("Salir");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,6 +88,7 @@ public class TerminosCondiciones extends javax.swing.JFrame {
         jPanel2.setLayout(new java.awt.GridLayout(2, 1));
 
         jTextArea1.setEditable(false);
+        jTextArea1.setBackground(new java.awt.Color(223, 230, 233));
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Arial", 3, 14)); // NOI18N
         jTextArea1.setRows(5);
@@ -97,6 +100,7 @@ public class TerminosCondiciones extends javax.swing.JFrame {
 
         jPanel3.setLayout(new java.awt.GridLayout(1, 0));
 
+        cH_Aceptar.setBackground(new java.awt.Color(223, 230, 233));
         cH_Aceptar.setText("He leído y acepto los términos y condiciones");
         cH_Aceptar.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -104,9 +108,6 @@ public class TerminosCondiciones extends javax.swing.JFrame {
             }
         });
         jPanel3.add(cH_Aceptar);
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MenuAyuda/onepiece-team-hd-1.jpg"))); // NOI18N
-        jPanel3.add(jLabel2);
 
         jPanel2.add(jPanel3);
 
@@ -145,7 +146,6 @@ Interfaz interfaz= Interfaz.getInstance();
     private javax.swing.JButton btnSalir;
     private javax.swing.JCheckBox cH_Aceptar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

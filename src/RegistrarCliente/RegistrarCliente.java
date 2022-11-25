@@ -81,7 +81,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Rockwell Extra Bold", 1, 36)); // NOI18N
         jLabel1.setText("Registro de Cliente");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, -1, -1));
 
         jPanelApellido2.setBackground(new java.awt.Color(223, 230, 233));
         jPanelApellido2.setBorder(javax.swing.BorderFactory.createTitledBorder("Apellido 2:"));
@@ -290,9 +290,9 @@ public class RegistrarCliente extends javax.swing.JFrame {
             .addGroup(jPanelPromedioComprasLayout.createSequentialGroup()
                 .addGap(47, 47, 47)
                 .addGroup(jPanelPromedioComprasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbtn11, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rbtn31, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rbtn21, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(rbtn11, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(rbtnUno, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(58, Short.MAX_VALUE))
         );
@@ -310,7 +310,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel2.add(jPanelPromedioCompras, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, -1, 140));
+        jPanel2.add(jPanelPromedioCompras, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, 140));
 
         btnRegistrar.setBackground(new java.awt.Color(223, 230, 233));
         btnRegistrar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -320,7 +320,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
                 btnRegistrarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 470, -1, -1));
+        jPanel2.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, 150, -1));
 
         btnEditar.setBackground(new java.awt.Color(223, 230, 233));
         btnEditar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -330,7 +330,7 @@ public class RegistrarCliente extends javax.swing.JFrame {
                 btnEditarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 520, 117, -1));
+        jPanel2.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 530, 150, -1));
 
         btnRegresar.setBackground(new java.awt.Color(223, 230, 233));
         btnRegresar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -340,18 +340,16 @@ public class RegistrarCliente extends javax.swing.JFrame {
                 btnRegresarActionPerformed(evt);
             }
         });
-        jPanel2.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 530, -1, -1));
+        jPanel2.add(btnRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 530, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RegistrarCliente/desktop-1536x864.jpg"))); // NOI18N
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-530, -210, -1, -1));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RegistrarCliente/ONEPIECE222.jpg"))); // NOI18N
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-210, -190, 1140, 930));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 623, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 623, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

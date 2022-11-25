@@ -74,7 +74,6 @@ public class Interfaz extends javax.swing.JFrame {
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem18 = new javax.swing.JMenuItem();
         jMenuItem11 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menú Principal One Piece v1.1");
@@ -83,7 +82,7 @@ public class Interfaz extends javax.swing.JFrame {
         jPanel1.setLayout(new java.awt.GridLayout(2, 1, 2, 0));
 
         jTextField1.setEditable(false);
-        jTextField1.setBackground(new java.awt.Color(199, 236, 238));
+        jTextField1.setBackground(new java.awt.Color(223, 230, 233));
         jTextField1.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("BIENVENIDOS A LA TIENDA");
@@ -91,7 +90,7 @@ public class Interfaz extends javax.swing.JFrame {
         jPanel1.add(jTextField1);
 
         jTextField2.setEditable(false);
-        jTextField2.setBackground(new java.awt.Color(199, 236, 238));
+        jTextField2.setBackground(new java.awt.Color(223, 230, 233));
         jTextField2.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField2.setText("Encuentra lo necesario para el trabajo en el menú superior");
@@ -104,14 +103,14 @@ public class Interfaz extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.PAGE_START);
 
-        jPanel2.setBackground(new java.awt.Color(199, 236, 238));
+        jPanel2.setBackground(new java.awt.Color(223, 230, 233));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/2026245.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\LUNA\\OneDrive\\Imágenes\\one piece 5558888.jpg")); // NOI18N
         jPanel2.add(jLabel1);
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
 
-        jMenuBar1.setBackground(new java.awt.Color(204, 255, 255));
+        jMenuBar1.setBackground(new java.awt.Color(223, 230, 233));
         jMenuBar1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
 
         jMenu1.setText("Menú");
@@ -263,11 +262,6 @@ public class Interfaz extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem11);
 
-        jMenuItem10.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/InterfazOnePiece/auriculares.png"))); // NOI18N
-        jMenuItem10.setText("Contactos");
-        jMenu4.add(jMenuItem10);
-
         jMenuBar1.add(jMenu4);
 
         setJMenuBar(jMenuBar1);
@@ -356,7 +350,6 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;

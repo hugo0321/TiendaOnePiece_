@@ -71,13 +71,19 @@ public static EditarCliente getInstance(){
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        cboCompras.setBackground(new java.awt.Color(223, 230, 233));
         cboCompras.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(cboCompras, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, -1, -1));
+        cboCompras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cboComprasActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cboCompras, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 400, -1, -1));
 
         lblTítulo.setFont(new java.awt.Font("Rockwell Condensed", 1, 36)); // NOI18N
-        lblTítulo.setForeground(new java.awt.Color(0, 255, 51));
-        lblTítulo.setText("Escriba los nuevos datos del cliente");
-        jPanel1.add(lblTítulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, -1));
+        lblTítulo.setForeground(new java.awt.Color(255, 255, 255));
+        lblTítulo.setText("ESCRIBA LOS NUEVOS DATOS DEL CLIENTE");
+        jPanel1.add(lblTítulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         JpanelNumeroDocumento.setBackground(new java.awt.Color(223, 230, 233));
         JpanelNumeroDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder("Número de docmento:"));
@@ -95,7 +101,7 @@ public static EditarCliente getInstance(){
         });
         JpanelNumeroDocumento.add(txtdocumento);
 
-        jPanel1.add(JpanelNumeroDocumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, 230, -1));
+        jPanel1.add(JpanelNumeroDocumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 90, 230, -1));
 
         jpanel1.setBackground(new java.awt.Color(223, 230, 233));
         jpanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Primer Nombre"));
@@ -118,7 +124,7 @@ public static EditarCliente getInstance(){
         });
         jpanel1.add(txtnombre);
 
-        jPanel1.add(jpanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 230, -1));
+        jPanel1.add(jpanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 230, -1));
 
         jpanelNombre2.setBackground(new java.awt.Color(223, 230, 233));
         jpanelNombre2.setBorder(javax.swing.BorderFactory.createTitledBorder("Segundo Nombre"));
@@ -141,7 +147,7 @@ public static EditarCliente getInstance(){
         });
         jpanelNombre2.add(txtnombre2);
 
-        jPanel1.add(jpanelNombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 70, 230, -1));
+        jPanel1.add(jpanelNombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 230, -1));
 
         jpanelApellido.setBackground(new java.awt.Color(223, 230, 233));
         jpanelApellido.setBorder(javax.swing.BorderFactory.createTitledBorder("Primer Apellido"));
@@ -164,7 +170,7 @@ public static EditarCliente getInstance(){
         });
         jpanelApellido.add(txtapellido);
 
-        jPanel1.add(jpanelApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 230, -1));
+        jPanel1.add(jpanelApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 230, -1));
 
         jpanelApellido2.setBackground(new java.awt.Color(223, 230, 233));
         jpanelApellido2.setBorder(javax.swing.BorderFactory.createTitledBorder("Segundo Apellido"));
@@ -182,48 +188,49 @@ public static EditarCliente getInstance(){
         });
         jpanelApellido2.add(txtapellido3);
 
-        jPanel1.add(jpanelApellido2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 140, 230, -1));
+        jPanel1.add(jpanelApellido2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 230, -1));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 153, 102));
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 204));
         jLabel1.setText("Número de compras");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 190, 40));
 
         jButton1.setBackground(new java.awt.Color(223, 230, 233));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jButton1.setText("Regresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, 130, -1));
 
         jButton2.setBackground(new java.awt.Color(223, 230, 233));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
         jButton2.setText("Confirmar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 300, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(399, 190, 130, -1));
 
+        cboidentificacion.setBackground(new java.awt.Color(223, 230, 233));
         cboidentificacion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(cboidentificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, -1, -1));
+        jPanel1.add(cboidentificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 100, -1, -1));
 
-        lblfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RegistrarCliente/El-fondo-de-pantalla-de-One-Piece-que-se-merece-tu-PC2.png"))); // NOI18N
-        jPanel1.add(lblfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 790, 480));
+        lblfondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/RegistrarCliente/barco_onepiece.jpg"))); // NOI18N
+        jPanel1.add(lblfondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-140, 0, 920, 490));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 786, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 476, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -429,6 +436,10 @@ public void Pordefecto(){
     private void txtdocumentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtdocumentoMouseClicked
         txtdocumento.setText("");
     }//GEN-LAST:event_txtdocumentoMouseClicked
+
+    private void cboComprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboComprasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cboComprasActionPerformed
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
